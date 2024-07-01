@@ -10,6 +10,35 @@
 ?>
 
 <header class="header">
+    
+    <div class="flex">
+        <a href="index.php" class="logo"> DumbBell Store </a>        
+    </div>
+
+    <div class="flex">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="#">Orders <i class="fa-solid fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="custom.php">Custom Orders</a></li>
+                        <li><a href="orders.php">Placed Orders</a></li>
+                    </ul>   
+                </li>
+                <li><a href="#">Account <i class="fa-solid fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="login.php">Login</a></li>
+                        <li><a href="register.php">Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>  
+    </div> 
 
     <div class="flex-top">
         <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div>
@@ -27,40 +56,8 @@
                 $cart_num_rows = mysqli_num_rows($sql_select_cart_count);
             ?>
             <a href="cart.php"><i class="fa fa-shopping-cart"></i><span>(<?php echo $cart_num_rows; ?>)</span></a>
-        </div> 
-        
-    </div>
-
-    <div class="flex">
-        <a href="index.php" class="logo"> DumbBell Store </a>        
-    </div>
-
-    <div class="flex">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="shop.php">Shop</a></li>
-                <li><a href="#">Orders +</a>
-                    <ul>
-                        <li><a href="custom.php">Custom Orders</a></li>
-                        <li><a href="orders.php">Placed Orders</a></li>
-                    </ul>   
-                </li>
-                <li><a href="#">Account +</a>
-                    <ul>
-                        <li><a href="login.php">Login</a></li>
-                        <li><a href="register.php">Register</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
         </div>
-        
-    </div> 
+    </div>
 
     <div class="account-box">
         <p>username: <span><?php echo $_SESSION['customer_name']; ?></span></p>

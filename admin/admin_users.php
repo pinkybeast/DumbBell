@@ -49,9 +49,8 @@
                 ?>
 
                 <div class="box">
-                    <p>User ID: <span><?php echo $fetch_users['id']; ?></span></p>
-                    <p>User Name: <span><?php echo $fetch_users['name']; ?></span></p>
-                    <p>User Email: <span><?php echo $fetch_users['email']; ?></span></p>
+                    <p>Name: <span><?php echo $fetch_users['name']; ?></span></p>
+                    <p>Email: <span><?php echo $fetch_users['email']; ?></span></p>
                     <p>User Type: <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; } ?>"><?php echo $fetch_users['user_type']; ?></span></p>
                     <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('Delete this user?');" class="delete-btn">Delete</a>
                 </div>

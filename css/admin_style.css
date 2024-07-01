@@ -248,7 +248,7 @@ section{
 }
 
 
-/* STYLING ADMIN PANEL & ADMIN HOME PAGE BELOW */
+/* STYLING ADMIN DASHBOARD & ADMIN HOME PAGE BELOW */
 
 .dashboard .box-container {
     display: grid;
@@ -561,31 +561,30 @@ section{
 }
 
 .users .box-container .box p{
-   font-size: 1.7rem;
-   color:var(--light-color);
-   margin-bottom: 1rem;
-   line-height: 1.5;
+    font-size: 1.7rem;
+    color:var(--light-color);
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .users .box-container .box p span{
-   color:var(--purple);
+    color:var(--purple);
 }
 
 .users .box-container .box .delete-btn{
-   margin-top: 0.5;
+    margin-top: 0.5;
 }
-
 
 /* STYLING THE MESSAGES PAGE BELOW */
 
 .messages .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
-   gap:3rem;
-   align-items: flex-start;
-   max-width: 1200px;
-   margin: 0 auto;
-   justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:3rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .messages .box-container .box{

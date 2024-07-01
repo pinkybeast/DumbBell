@@ -13,7 +13,7 @@
 
     <div class="flex">
 
-        <a href="admin_page.php" class="logo">Admin <span>Panel</span></a>
+        <a href="admin_page.php" class="logo">Dashboard <span>Admin</span></a>
 
         <nav class="navbar">
             <a href="admin_page.php">Home</a>

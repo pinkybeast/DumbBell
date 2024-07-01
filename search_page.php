@@ -107,7 +107,7 @@
                 ?>
                 <form action="" method="POST" class="box">
                     <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
-                    <div class="price">Rs <?php echo $fetch_products['price']; ?></div>
+                    <div class="price">Rp <?php echo $fetch_products['price']; ?></div>
                     <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
                     <div class="name"><?php echo $fetch_products['name']; ?></div>
                     <div class="category"><?php echo $fetch_products['category']; ?></div>

@@ -71,7 +71,7 @@
                     <a href="view_page.php?pid=<?php echo $fetch_cart['pid']; ?>" class="fas fa-eye"></a>
                     <img src="uploaded_images/<?php echo $fetch_cart['image']; ?>" alt="" class="product-image">
                     <div class="name"><?php echo $fetch_cart['name']; ?></div>
-                    <div class="price">Rs <?php echo $fetch_cart['price']; ?></div>
+                    <div class="price">Rp <?php echo $fetch_cart['price']; ?></div>
                     <div class="category"><?php echo $fetch_cart['category']; ?></div>
                     <div class="color"><?php echo $fetch_cart['color']; ?></div>
                     <form action="" method="post">
@@ -79,7 +79,7 @@
                         <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="qty">
                         <input type="submit" value="update" class="option-btn" name="update_quantity">
                     </form>
-                    <div class="sub-total"> sub-total : <span>Rs <?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span></div>
+                    <div class="sub-total"> sub-total : <span>Rp <?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>,-</span></div>
                 </div>
             <?php
             $grand_total += $sub_total;
@@ -96,7 +96,7 @@
             </div>
 
             <div class="cart-total">
-                <p>grand total : <span>Rs <?php echo $grand_total; ?>/-</span></p>
+                <p>grand total : <span>Rp <?php echo $grand_total; ?>,-</span></p>
                 <a href="shop.php" class="option-btn">continue shopping</a>
                 <a href=" checkout.php" class="btn <?php echo ($grand_total > 1)?'':'disabled' ?>">proceed to checkout</a>
             </div>

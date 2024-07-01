@@ -92,7 +92,7 @@
             <form action="" method="POST" class="box">
                 <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="price">Rs <?php echo $fetch_products['price']; ?></div>
+                <div class="price">Rp <?php echo $fetch_products['price']; ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>
                 <div class="color">in <?php echo $fetch_products['color']; ?></div>
                 <div class="details"><?php echo $fetch_products['details']; ?></div>

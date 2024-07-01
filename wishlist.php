@@ -90,7 +90,7 @@
                 <a href="view_page.php?pid=<?php echo $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
                 <img src="uploaded_images/<?php echo $fetch_wishlist['image']; ?>" alt="" class="product-image">
                 <div class="name"><?php echo $fetch_wishlist['name']; ?></div>
-                <div class="price">Rs <?php echo $fetch_wishlist['price']; ?></div>
+                <div class="price">Rp <?php echo $fetch_wishlist['price']; ?></div>
                 <div class="category"><?php echo $fetch_wishlist['category']; ?></div>
                 <div class="color"><?php echo $fetch_wishlist['color']; ?></div>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['pid']; ?>">
@@ -112,7 +112,7 @@
             </div>
 
             <div class="wishlist-total">
-                <p>grand total : <span>Rs <?php echo $grand_total; ?>/-</span></p>
+                <p>grand total : <span>Rp <?php echo $grand_total; ?>,-</span></p>
                 <a href="shop.php" class="option-btn">continue shopping</a>
                 <a href="wishlist.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">delete all</a>
             </div>
