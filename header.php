@@ -32,7 +32,7 @@
     </div>
 
     <div class="flex">
-        <a href="index.php" class="logo"><span>&#10084;</span> Platonic Club <span>&#10084;</span></a>        
+        <a href="index.php" class="logo"> DumbBell Store </a>        
     </div>
 
     <div class="flex">
