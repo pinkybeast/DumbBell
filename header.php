@@ -32,13 +32,13 @@
     </div>
 
     <div class="flex">
-        <a href="home.php" class="logo"><span>&#10084;</span> Platonic Club <span>&#10084;</span></a>        
+        <a href="index.php" class="logo"><span>&#10084;</span> Platonic Club <span>&#10084;</span></a>        
     </div>
 
     <div class="flex">
         <nav class="navbar">
             <ul>
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="#">Orders +</a>

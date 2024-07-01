@@ -27,7 +27,7 @@
         }
         else{
             mysqli_query($conn, "INSERT INTO wishlist(customer_id, pid, name, price, color, category, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_image')") or die('Query Failed');
-            $message[] = 'Added product to wishlist';
+            $message[] = 'Added product to wishlist successfully!';
         }
     }
 
@@ -52,8 +52,8 @@
             if(mysqli_num_rows($sql_check_wishlist_num) > 0){
                 mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
             }
-            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
-            $message[] = 'Added product to cart';
+            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '', '$product_image')") or die('Query Failed');
+            $message[] = 'Added product to cart successfully!';
         }
     }
 
@@ -65,32 +65,80 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop</title>
+        <title>Home</title>
 
         <!--font awesome cdnjs link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+    </head>
 
     <body>
 
     <?php  
         include_once('./header.php');
     ?>
-        <section class="heading">
-            <h3>Our Shop</h3>
-            <p><a href="index.php">home</a> / shop</p>
+
+        <section class="home">
+
+            <div class="content">
+                <h3>New Collections</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est alias qui velit veritatis sapiente molestias. Lorem ipsum dolor.</p>
+                <a href="about.php" class="btn">Discover More</a>
+            </div>
+
         </section>
 
-        <section class="necklaces">
+        <section class="category">
 
-            <h1 class="title"><span>&#9829;</span> Necklaces <span>&#9829;</span></h1>           
+            <div class="flex">
+
+                <div class="image">
+                    <img src="./images/sets3.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <h3>All Earrings</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet.</p>
+                    <a href="earrings.php" class="btn">shop all earrings</a>
+                </div>
+            </div>
+
+            <div class="flex">
+                
+                <div class="content">
+                    <h3>All Necklaces</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laborum.</p>
+                    <a href="necklace.php" class="btn">shop all necklaces</a>
+                </div>
+
+                <div class="image">
+                    <img src="./images/set2.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="home2">
+
+            <div class="content2">
+                <h3>Custom Collections</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est alias qui velit veritatis sapiente molestias. Lorem ipsum dolor.</p>
+                <a href="custom.php" class="btn">Order Now</a>
+            </div>
+            
+
+        </section>
+
+        <section class="products">
+
+            <h1 class="title"><span>&#9829;</span> latest products <span>&#9829;</span></h1>
 
             <div class="box-container">
 
                 <?php
-                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE category = 'necklace'") or die('Query Failed');
+                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products LIMIT 6 OFFSET 22") or die('Query Failed');
 
                     if(mysqli_num_rows($sql_select_products) > 0){
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  
@@ -119,13 +167,16 @@
                     }
                 ?>
             </div>
-        </section>
 
+            <div class="more-btn">
+                <a href="shop.php" class="option-btn">load more</a>
+            </div>
+        </section>
 
     <?php 
         include_once('./footer.php');
     ?>
 
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>

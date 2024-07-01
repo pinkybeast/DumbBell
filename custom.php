@@ -70,7 +70,7 @@
 
         <section class="heading">
             <h3>custom order</h3>
-            <p> <a href="home.php">home</a> / custom </p>
+            <p> <a href="index.php">home</a> / custom </p>
         </section>
 
         <section class="custom">

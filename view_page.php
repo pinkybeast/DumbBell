@@ -116,7 +116,7 @@
             ?>
             
             <div class="more-btn">
-                <a href="home.php" class="option-btn">go to home page</a>
+                <a href="index.php" class="option-btn">go to home page</a>
             </div>
 
         </section>

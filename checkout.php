@@ -74,7 +74,7 @@
 
         <section class="heading">
             <h3>Checkout order</h3>
-            <p><a href="home.php">home</a> / checkout</p>
+            <p><a href="index.php">home</a> / checkout</p>
         </section>
 
         <section class="display-order">
