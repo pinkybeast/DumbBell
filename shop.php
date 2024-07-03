@@ -130,7 +130,7 @@
 
         <section class="products">
 
-            <h1 class="title"><span>&#9829;</span> all products <span>&#9829;</span></h1> 
+            <h1 class="title"> all products </h1> 
             
             <!-- <i class="fa-solid fa-filter" style="color:var(--red); font-size:3rem; padding:0.5rem; margin-left:5rem; border: var(--border);"></i> -->
 

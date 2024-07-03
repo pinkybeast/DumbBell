@@ -12,7 +12,7 @@
 <header class="header">
     
     <div class="flex">
-        <a href="index.php" class="logo"> DumbBell Store </a>        
+        <a href="index.php" class="logo"> DumbBell</a>        
     </div>
 
     <div class="flex">

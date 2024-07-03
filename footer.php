@@ -6,7 +6,7 @@
             <h3>Quick Links</h3>
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
-            <a href="custom.php">Contact Us</a>
+            <a href="custom.php">Message Us</a>
             <a href="shop.php">Our Shop</a>
         </div>
 
@@ -19,17 +19,17 @@
         </div>
 
         <div class="box">
-            <p><i class="fas fa-phone"></i> +62-812-345-6789 </p>
+            <p><i class="fas fa-phone"></i> +62-822-9904-3443 </p>
             <p><i class="fas fa-envelope"></i> dumbbell@gmail.com </p>
-            <p><i class="fas fa-map-marker-alt"></i> Bekasi, Indonesia - 44220 </p>
+            <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
         </div>
 
         <div class="box">
-            <h3>Follow Us</h3>
+            <h3>Contact Us</h3>
             <a href="https://www.instagram.com/dumbbell/" target="_blank"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram </a>
             <a href="https://www.facebook.com/dumbbell"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i> Facebook </a>
             <a href="https://www.tiktok.com/@dumbbell"><i class="fab fa-tiktok"></i> TikTok </a>
-            <a href="https://www.x.com/dumbbell"><i class="fa-brands fa-square-x-twitter"></i> X </a>
+            
             <a href=""></a>
         </div>
     </div>

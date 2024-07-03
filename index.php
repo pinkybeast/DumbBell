@@ -83,9 +83,9 @@
         <section class="home">
 
             <div class="content">
-                <h3>New Collections</h3>
+                <h3>DumbBell Website</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est alias qui velit veritatis sapiente molestias. Lorem ipsum dolor.</p>
-                <a href="about.php" class="btn">Discover More</a>
+                <a href="about.php" class="btn">More About Us</a>
             </div>
 
         </section>
@@ -99,18 +99,18 @@
                 </div>
 
                 <div class="content">
-                    <h3>All Earrings</h3>
+                    <h3>Bulking</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet.</p>
-                    <a href="earrings.php" class="btn">shop all earrings</a>
+                    <a href="earrings.php" class="btn">Shop All Bulking</a>
                 </div>
             </div>
 
             <div class="flex">
                 
                 <div class="content">
-                    <h3>All Necklaces</h3>
+                    <h3>Cutting</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laborum.</p>
-                    <a href="necklace.php" class="btn">shop all necklaces</a>
+                    <a href="necklace.php" class="btn">Shop All Cuttings</a>
                 </div>
 
                 <div class="image">
@@ -120,20 +120,11 @@
 
         </section>
 
-        <section class="home2">
-
-            <div class="content2">
-                <h3>Custom Collections</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est alias qui velit veritatis sapiente molestias. Lorem ipsum dolor.</p>
-                <a href="custom.php" class="btn">Order Now</a>
-            </div>
-            
-
-        </section>
+       
 
         <section class="products">
 
-            <h1 class="title"><span>&#9829;</span> latest products <span>&#9829;</span></h1>
+            <h1 class="title"> Our Products </h1>
 
             <div class="box-container">
 
