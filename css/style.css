@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Righteous&family=Rubik:wght@300;400;500;600&family=Secular+One&display=swap');
 
 :root {
-    --purple: #d44078;
+    --purple: hsl(210, 76%, 31%);
     /* --orange:#e67716; */
     --orange: rgb(56, 191, 196);
     --red:#cb0303;
@@ -159,9 +159,9 @@ section{
     min-height: 30vh;
 
     /* background-color: var(--black); */
-    background: url('../images/about-bg6.jpg');
-    background-size: cover; 
-    background-position: top;
+    background: url('../images/gymbg1.jpg');
+    background-size:auto; 
+    background-position: center;
 
     text-align: center;
 }
@@ -336,8 +336,8 @@ section{
 .header .flex .logo {
     font-size: 3.1rem;
     font-family: 'Archivo Black', sans-serif;
-    text-transform: uppercase;
-    color: rgb(229, 130, 146);
+    text-transform:none;
+    color: rgb(195, 0, 0)
     padding-top: 1rem;  
 }
 
@@ -446,7 +446,7 @@ section{
 .home{
     min-height: 75vh;
     /* background: url('../images/home-bg.png') no-repeat; */
-    background: url('../images/bg3.jpg') no-repeat;
+    background: url('../images/gymbg1.jpg') no-repeat;
     background-size: cover;
     background-position:right;
     display: flex;

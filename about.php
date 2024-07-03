@@ -16,7 +16,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
+        <title>About </title>
 
         <!--font awesome cdnjs link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -32,7 +32,7 @@
     ?>
 
         <section class="heading">
-            <h3>about us</h3>
+            <h3>About DumbBell</h3>
             <p><a href="index.php">home</a> / about</p>
         </section>
 
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="content">
-                    <h3>why choose us?</h3>
+                    <h3>why DumbBell?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum! Lorem ipsum dolor sit amet.</p>
                     <a href="shop.php" class="btn">shop now</a>
                 </div>
@@ -54,7 +54,7 @@
             <div class="flex">
                 
                 <div class="content">
-                    <h3>what we provide?</h3>
+                    <h3>what DumbBell provide?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum!</p>
                     <a href="custom.php" class="btn">contact us</a>
                 </div>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="content">
-                    <h3>who are we?</h3>
+                    <h3>who is DumbBell?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum! Lorem ipsum dolor sit amet.</p>
                     <a href="#reviews" class="btn">client diaries</a>
                 </div>

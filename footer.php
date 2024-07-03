@@ -6,8 +6,8 @@
             <h3>Quick Links</h3>
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
-            <a href="custom.php">Message Us</a>
             <a href="shop.php">Our Shop</a>
+            <a href="custom.php">Send Us A Message!</a>
         </div>
 
         <div class="box">
@@ -29,8 +29,6 @@
             <a href="https://www.instagram.com/dumbbell/" target="_blank"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram </a>
             <a href="https://www.facebook.com/dumbbell"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i> Facebook </a>
             <a href="https://www.tiktok.com/@dumbbell"><i class="fab fa-tiktok"></i> TikTok </a>
-            
-            <a href=""></a>
         </div>
     </div>
 

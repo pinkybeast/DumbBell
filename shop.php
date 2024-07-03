@@ -88,9 +88,7 @@
         <section class="filter">
             <div class="flex">
 
-                <div class="icons">
-                    <div id="filter-btn" class="fa-solid fa-filter"></div>
-                </div>
+                
 
                 <form action="" method="POST" class="filter-form">
                     <h3>Color: </h3>
@@ -139,9 +137,8 @@
                 <?php
                 if(isset($_POST['filter_product'])){
                     $filter_category = $_POST['category'];
-                    $filter_color = $_POST['color'];
                     
-                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE category = '$filter_category' AND color = '$filter_color';") or die('Query Failed');
+                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE category = '$filter_category';") or die('Query Failed');
 
                     if(mysqli_num_rows($sql_select_products) > 0){
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  

@@ -21,12 +21,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="shop.php">Shop</a></li>
-                <li><a href="#">Orders <i class="fa-solid fa-caret-down"></i></a>
-                    <ul>
-                        <li><a href="custom.php">Custom Orders</a></li>
-                        <li><a href="orders.php">Placed Orders</a></li>
-                    </ul>   
-                </li>
+                <li><a href="orders.php">Orders</a></li>
+                <li><a href="custom.php">Message</a></li>
                 <li><a href="#">Account <i class="fa-solid fa-caret-down"></i></a>
                     <ul>
                         <li><a href="login.php">Login</a></li>

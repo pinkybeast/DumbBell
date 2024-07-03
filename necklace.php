@@ -79,13 +79,13 @@
         include_once('./header.php');
     ?>
         <section class="heading">
-            <h3>Our Shop</h3>
+            <h3>Products for Cutting</h3>
             <p><a href="index.php">home</a> / shop</p>
         </section>
 
         <section class="necklaces">
 
-            <h1 class="title"><span>&#9829;</span> Necklaces <span>&#9829;</span></h1>           
+            <h1 class="title">Cutting </h1>           
 
             <div class="box-container">
 

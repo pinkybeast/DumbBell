@@ -2,7 +2,7 @@
 
 :root {
     /*--purple: #ac27ac;*/
-    --purple: #d42a6b;
+    --purple: hsl(210, 76%, 31%);
     /* --orange:#e67716; */
     --orange: rgb(56, 191, 196);
     --red:#cb0303;

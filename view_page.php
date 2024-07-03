@@ -35,7 +35,6 @@
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
-        $product_color = $_POST['product_color'];
         $product_category = $_POST['product_category'];
         $product_quantity = $_POST['product_quantity'];
         $product_image = $_POST['product_image'];
@@ -80,7 +79,7 @@
         include_once('./header.php');
     ?>
         <section class="quick-view">
-            <h1 class="title"><span>&#9829;</span> product details <span>&#9829;</span></h1>
+            <h1 class="title"> product details </h1>
             <?php
                 if(isset($_GET['pid'])){
                     $pid = $_GET['pid'];
@@ -94,7 +93,6 @@
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="price">Rp <?php echo $fetch_products['price']; ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>
-                <div class="color">in <?php echo $fetch_products['color']; ?></div>
                 <div class="details"><?php echo $fetch_products['details']; ?></div>
                 <input type="number" min="0" max="100" value="1" name="product_quantity" class="qty">
                 <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>" >

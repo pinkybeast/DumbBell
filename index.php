@@ -84,7 +84,10 @@
 
             <div class="content">
                 <h3>DumbBell Website</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est alias qui velit veritatis sapiente molestias. Lorem ipsum dolor.</p>
+                <p>
+                DumbBell is a user-friendly e-commerce platform specifically designed to cater to individuals who are new to lifting weights or just starting their gym journey.
+                The website provides a curated selection of supplements tailored to beginners, aiming to support their fitness goals and enhance their workout experience.
+                </p>
                 <a href="about.php" class="btn">More About Us</a>
             </div>
 
@@ -95,12 +98,15 @@
             <div class="flex">
 
                 <div class="image">
-                    <img src="./images/sets3.jpg" alt="">
+                    <img src="./images/bulking1.jpg" alt="">
                 </div>
 
                 <div class="content">
                     <h3>Bulking</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet.</p>
+                    <p>
+                    Bulking is a phase in a bodybuilder or athlete's training regimen focused on gaining muscle mass and strength. During this period, individuals consume a calorie surplus, meaning they eat more calories than they burn, to fuel muscle growth and recover from intense workouts.
+                    The primary goals during bulking are to increase muscle size and enhance overall strength.
+                    </p>
                     <a href="earrings.php" class="btn">Shop All Bulking</a>
                 </div>
             </div>
@@ -109,12 +115,15 @@
                 
                 <div class="content">
                     <h3>Cutting</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laborum.</p>
+                    <p>
+                    Cutting is the phase aimed at reducing body fat while preserving muscle mass. During this period, individuals eat fewer calories than they burn, creating a calorie deficit. Maintaining a high protein intake is important to prevent muscle loss.
+                    Cardiovascular exercise is added to the routine to increase calorie expenditure. Strength training continues to ensure muscles are preserved, even as body fat decreases.
+                    </p>
                     <a href="necklace.php" class="btn">Shop All Cuttings</a>
                 </div>
 
                 <div class="image">
-                    <img src="./images/set2.jpg" alt="">
+                    <img src="./images/cutting2.jpg" alt="">
                 </div>
             </div>
 
