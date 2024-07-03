@@ -68,7 +68,7 @@
                     <option value="admin">Admin</option>
                 </select>
                 <input type="submit" name="submit" value="register now" class="btn">
-                <p>Already have an account? <a href="login.php">Login Now</a></p>
+                <p>Already have an account? <a href="login.php">Login Here</a></p>
             </form>
         </div>
     </body>
