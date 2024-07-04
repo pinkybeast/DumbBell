@@ -15,14 +15,15 @@
         <a href="index.php" class="logo"> DumbBell</a>        
     </div>
 
-    <div class="flex">
+    <div class="flex-top">
+        <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div>
         <nav class="navbar">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="orders.php">Orders</a></li>
                 <li><a href="custom.php">Message</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="#">Account <i class="fa-solid fa-caret-down"></i></a>
                     <ul>
                         <li><a href="login.php">Login</a></li>
@@ -34,10 +35,6 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
         </div>  
-    </div> 
-
-    <div class="flex-top">
-        <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div>
         <div class="icons">
             <div id="customer-btn" class="fas fa-user"></div>
 
