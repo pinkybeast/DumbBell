@@ -56,6 +56,11 @@
         }
     }
 
+    if(isset($_GET['pid'])){
+        $pid = $_GET['pid'];
+        $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE id = '$pid'") or die('Query Failed');
+        $fetch_products = mysqli_fetch_assoc($sql_select_products);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +69,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Details | DumbBell</title>
+        <title><?php echo $fetch_products['name']; ?></title>
 
         <!--font awesome cdnjs link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
