@@ -88,29 +88,7 @@
         <section class="filter">
             <div class="flex">
 
-                
-
                 <form action="" method="POST" class="filter-form">
-                    <h3>Color: </h3>
-                    <input type="radio" id="pink" name="color" value="pink">
-                    <label for="pink">Pink </label>
-                    <input type="radio" id="red" name="color" value="red">
-                    <label for="red">Red </label>
-                    <input type="radio" id="purple" name="color" value="purple">
-                    <label for="purple">Purple </label>
-                    <input type="radio" id="blue" name="color" value="blue">
-                    <label for="blue">Blue </label>
-                    <input type="radio" id="green" name="color" value="green">
-                    <label for="green">Green </label>
-                    <input type="radio" id="white" name="color" value="white">
-                    <label for="white">White </label>
-                    <input type="radio" id="black" name="color" value="black">
-                    <label for="black">Black </label>
-                    <input type="radio" id="multi-color" name="color" value="multi-color">
-                    <label for="multi-color">Multi Color </label>
-                    <input type="radio" id="yellow" name="color" value="yellow">
-                    <label for="yellow">Yellow </label>
-                    <br>
                     <h3>Category: </h3>
                     <select name="category" class="select-box">
                         <option value="necklace">Necklace</option>
