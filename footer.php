@@ -33,6 +33,6 @@
     </div>
 
     <div class="copyright">
-        &copy; Copyright <?php echo date('Y'); ?> by <span>DumbBell Developers</span> 
+        &copy; <?php echo date('Y'); ?> DumbBell. All rights reserved.</span> 
     </div>
 </section>
