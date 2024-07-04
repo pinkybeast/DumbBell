@@ -65,7 +65,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop</title>
+        <title>Shop | DumbBell</title>
 
         <!--font awesome cdnjs link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -91,12 +91,8 @@
                 <form action="" method="POST" class="filter-form">
                     <h3>Category: </h3>
                     <select name="category" class="select-box">
-                        <option value="necklace">Necklace</option>
-                        <option value="earrings">Earrings</option>
-                        <option value="bracelet">Bracelet</option>
-                        <option value="ring">Ring</option>
-                        <option value="anklet">Anklet</option>
-                        <option value="other">Other</option>
+                        <option value="bulking">Bulking</option>
+                        <option value="cutting">Cutting</option>
                     </select>
                     <input type="submit" value="filter product" name="filter_product" class="btn" >  
                 </form> 
