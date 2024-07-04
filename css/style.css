@@ -564,6 +564,7 @@ section{
 .products .box-container{
     max-width: 1300px;
     margin: 0 auto;
+    padding-top: 2.5rem;
     padding-bottom: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 31rem);
