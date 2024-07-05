@@ -75,7 +75,7 @@
 
         <section class="wishlist">
 
-            <h1 class="title"><span>&#9829;</span> products added <span>&#9829;</span></h1>
+            <h1 class="title"> products added </h1>
 
             <div class="box-container">
 
@@ -92,7 +92,6 @@
                 <div class="name"><?php echo $fetch_wishlist['name']; ?></div>
                 <div class="price">Rp <?php echo $fetch_wishlist['price']; ?></div>
                 <div class="category"><?php echo $fetch_wishlist['category']; ?></div>
-                <div class="color"><?php echo $fetch_wishlist['color']; ?></div>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['pid']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">

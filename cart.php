@@ -56,7 +56,7 @@
 
         <section class="shopping-cart">
 
-            <h1 class="title"><span>&#9829;</span> products added <span>&#9829;</span></h1>
+            <h1 class="title"> products added </h1>
 
             <div class="box-container">
 
@@ -73,7 +73,6 @@
                     <div class="name"><?php echo $fetch_cart['name']; ?></div>
                     <div class="price">Rp <?php echo $fetch_cart['price']; ?></div>
                     <div class="category"><?php echo $fetch_cart['category']; ?></div>
-                    <div class="color"><?php echo $fetch_cart['color']; ?></div>
                     <form action="" method="post">
                         <input type="hidden" value="<?php echo $fetch_cart['id']; ?>" name="cart_id">
                         <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="qty">

@@ -59,7 +59,6 @@
                     <p>Customer Number: <span><?php echo $fetch_message['number']; ?></span></p>
                     <p>Customer Email: <span><?php echo $fetch_message['email']; ?></span></p>
                     <p>Message: <span><?php echo $fetch_message['message']; ?></span></p>
-                    <img src="../received_images/<?php echo $fetch_message['image']; ?>" alt="No image" class="product-image" >
                     <a href="admin_contact.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('Delete this message?');" class="delete-btn">Delete</a>
                 </div>
 

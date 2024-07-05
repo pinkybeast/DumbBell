@@ -70,7 +70,7 @@
 
         <section class="heading">
             <h3>Let Us Know What You Have In Mind!</h3>
-            <p> <a href="index.php">home</a> / custom </p>
+            <p> <a href="index.php">home</a> / message us! </p>
         </section>
 
         <section class="custom">

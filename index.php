@@ -107,7 +107,7 @@
                     Bulking is a phase in a bodybuilder or athlete's training regimen focused on gaining muscle mass and strength. During this period, individuals consume a calorie surplus, meaning they eat more calories than they burn, to fuel muscle growth and recover from intense workouts.
                     The primary goals during bulking are to increase muscle size and enhance overall strength.
                     </p>
-                    <a href="earrings.php" class="btn">Shop All Bulking</a>
+                    <a href="bulking.php" class="btn">Shop All Bulking</a>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                     Cutting is the phase aimed at reducing body fat while preserving muscle mass. During this period, individuals eat fewer calories than they burn, creating a calorie deficit. Maintaining a high protein intake is important to prevent muscle loss.
                     Cardiovascular exercise is added to the routine to increase calorie expenditure. Strength training continues to ensure muscles are preserved, even as body fat decreases.
                     </p>
-                    <a href="necklace.php" class="btn">Shop All Cuttings</a>
+                    <a href="cutting.php" class="btn">Shop All Cuttings</a>
                 </div>
 
                 <div class="image">
@@ -138,7 +138,7 @@
             <div class="box-container">
 
                 <?php
-                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products LIMIT 6 OFFSET 22") or die('Query Failed');
+                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products LIMIT 3 OFFSET 9") or die('Query Failed');
 
                     if(mysqli_num_rows($sql_select_products) > 0){
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  

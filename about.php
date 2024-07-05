@@ -70,11 +70,7 @@
                     <img src="./images/butterfly1.jpg" alt="">
                 </div>
 
-                <div class="content">
-                    <h3>who is DumbBell?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum! Lorem ipsum dolor sit amet.</p>
-                    <a href="#reviews" class="btn">client diaries</a>
-                </div>
+                
             </div>
 
 

@@ -90,7 +90,7 @@
             <div class="box-container">
 
                 <?php
-                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE category = 'necklace'") or die('Query Failed');
+                    $sql_select_products = mysqli_query($conn, "SELECT * FROM products WHERE category = 'Whey Protein'") or die('Query Failed');
 
                     if(mysqli_num_rows($sql_select_products) > 0){
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  

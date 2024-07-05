@@ -1239,7 +1239,7 @@ section{
     border:var(--border);
     text-align: center;
     padding:2rem;
-    margin:0 auto;
+    margin:3rem auto;
 }
  
 .custom form h3{

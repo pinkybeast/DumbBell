@@ -91,8 +91,10 @@
                 <form action="" method="POST" class="filter-form">
                     <h3>Category: </h3>
                     <select name="category" class="select-box">
-                        <option value="bulking">Bulking</option>
-                        <option value="cutting">Cutting</option>
+                        <option value="Gainer">Gainer</option>
+                        <option value="Whey Protein">Whey Protein</option>
+                        <option value="Creatine">Creatine</option>
+                        <option value="Pre-Workout">Pre-Workout</option>
                     </select>
                     <input type="submit" value="filter product" name="filter_product" class="btn" >  
                 </form> 

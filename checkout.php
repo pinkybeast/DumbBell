@@ -100,7 +100,9 @@
 
             <form action="" method="POST">
 
-                <h3><span>&#9829;</span> place your order <span>&#9829;</span></h3>
+                <h3>bukti pembayaran menggunakan Gopay, DANA  bisa ke nomor 082299043443
+                    <br> Untuk transfer bank bisa ke nomer rekening : 56810383
+                    <br>BUKTI PEMBAYARAN HARAP DI KIRIM KE EMAIL dumbbell@gmail.com</h3>
 
                 <div class="flex">
                     <div class="inputBox">
