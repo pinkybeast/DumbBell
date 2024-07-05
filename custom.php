@@ -14,11 +14,6 @@
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $number = mysqli_real_escape_string($conn, $_POST['number']);
         $msg = mysqli_real_escape_string($conn, $_POST['message']);
-
-        $image = $_FILES['image']['name'];
-        $image_size = $_FILES['image']['size'];
-        $image_tmp_name = $_FILES['image']['tmp_name'];
-        $image_folder = './received_images/'.$image;
     
         $sql_select_message = mysqli_query($conn, "SELECT * FROM messages WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
     
@@ -26,21 +21,13 @@
             $message[] = 'Message sent already!';
         }
         else{
-            $sql_insert_message = mysqli_query($conn, "INSERT INTO messages(customer_id, name, email, number, message, image) VALUES('$customer_id', '$name', '$email', '$number', '$msg', '$image')") or die('query failed');
+            $sql_insert_message = mysqli_query($conn, "INSERT INTO messages(customer_id, name, email, number, message) VALUES('$customer_id', '$name', '$email', '$number', '$msg')") or die('query failed');
             
             if($sql_insert_message){
-
-                if($image_size > 20000000){
-                    $message[] = 'Image size is too large.';
-                }
-                else{
-                    move_uploaded_file($image_tmp_name, $image_folder);
-                    $message[] = 'Message sent successfully!';
-                }
+                $message[] = 'Message sent successfully!';
             }
             else{
                 $message[] = 'Message not sent!';
-    
             }
         }
     }
@@ -60,6 +47,7 @@
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="images/logo-only.png">
     </head>
 
     <body>

@@ -72,6 +72,7 @@
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="images/logo-only.png">
 
     </head>
 
@@ -89,7 +90,7 @@
             <div class="flex">
 
                 <form action="" method="POST" class="filter-form">
-                    <h3>Category: </h3>
+                    <h3>Category </h3>
                     <select name="category" class="select-box">
                         <option value="Gainer">Gainer</option>
                         <option value="Whey Protein">Whey Protein</option>

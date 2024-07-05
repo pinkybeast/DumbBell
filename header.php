@@ -11,15 +11,17 @@
 
 <header class="header">
     
-    <div class="flex">
+    <!-- <div class="flex">
         <a href="index.php" class="logo"> DumbBell</a>        
-    </div>
+    </div> -->
 
     <div class="flex-top">
-        <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div>
+        <a href="index.php" class="logo"><img src="images/logo.png" alt="logo" width="17%"></a>
+        <!-- <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div> -->
         <nav class="navbar">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <!-- <li><a href="index.php"><img src="images/logo.png" alt="logo" width="20%"></a></li> -->
+                <li><a href="search_page.php">Search</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="orders.php">Orders</a></li>
                 <li><a href="custom.php">Message</a></li>

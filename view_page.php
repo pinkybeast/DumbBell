@@ -76,6 +76,7 @@
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="images/logo-only.png">
     </head>
 
     <body>

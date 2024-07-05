@@ -30,6 +30,7 @@
 
         <!--custom admin css file link with force reload to avoid caching-->
         <link rel="stylesheet" href="../css/admin_style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="../images/logo-only.png">
     </head>
     
     <body>
@@ -51,7 +52,7 @@
                 <div class="box">
                     <p>Name: <span><?php echo $fetch_users['name']; ?></span></p>
                     <p>Email: <span><?php echo $fetch_users['email']; ?></span></p>
-                    <p>User Type: <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; } ?>"><?php echo $fetch_users['user_type']; ?></span></p>
+                    <p>User Type: <span style="font-weight:700; color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--red)'; } ?>"><?php echo $fetch_users['user_type']; ?></span></p>
                     <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('Delete this user?');" class="delete-btn">Delete</a>
                 </div>
 

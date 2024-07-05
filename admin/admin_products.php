@@ -71,6 +71,8 @@
 
         <!--custom admin css file link -->
         <link rel="stylesheet" href="../css/admin_style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="../images/logo-only.png">
+
     </head>
     
     <body>
@@ -85,19 +87,17 @@
         <form action="" method="POST" enctype="multipart/form-data">
             <h3>Add New Products</h3>
             <input type="text" name="name" class="box" placeholder="Enter product name" required >
-            <input type="number" min="0" name="price" class="box" placeholder="Enter product price" required >
+            <input type="text" min="0" name="price" class="box" placeholder="Enter product price" required >
             <input type="text" name="color" class="box" placeholder="Enter product color" required >
-            <p>Select product category:</p>
+            <p>Select product category</p>
             <select name="category" class="box">
-                    <option value="necklace">Necklace</option>
-                    <option value="earrings">Earrings</option>
-                    <option value="bracelet">Bracelet</option>
-                    <option value="ring">Ring</option>
-                    <option value="anklet">Anklet</option>
-                    <option value="other">Other</option>
+                <option value="Gainer">Gainer</option>
+                <option value="Whey Protein">Whey Protein</option>
+                <option value="Creatine">Creatine</option>
+                <option value="Pre-Workout">Pre-Workout</option>
             </select>
             <textarea name="details" cols="30" rows="10" class="box" placeholder="Enter products details" required></textarea>
-            <p>Select image file:</p>
+            <p>Select image file</p>
             <input type="file" id="image-files" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required><br><br>
             <input type="submit" value="add product" name="add_product" class="btn" >
         </form>
@@ -118,7 +118,6 @@
                 <img src="../uploaded_images/<?php echo $fetch_products['image']; ?>" alt="" class="product-image" >
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>
-                <div class="color">IN <?php echo $fetch_products['color']; ?></div>
                 <div class="details"><?php echo $fetch_products['details']; ?></div>
                 <a href="admin_update_product.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Update</a>
                 <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>

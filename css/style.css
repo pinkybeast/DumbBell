@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --purple: hsl(210, 76%, 31%);
-    /* --orange:#e67716; */
-    --orange: rgb(56, 191, 196);
+    --primary: #134f8b;
+    --secondary: #96C9F4;
     --red:#cb0303;
     --black: #333;
     --light-pink: rgb(238, 169, 209);
@@ -28,13 +27,13 @@
 }
 
 *::selection{
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
 }
 
 *::-webkit-scrollbar{
     height: 0.5rem;
-    width: 1rem;
+    width: 0.3rem;
 }
 
 *::-webkit-scrollbar-track{
@@ -42,7 +41,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 html{
@@ -69,7 +68,10 @@ section{
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #666;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,11 +107,11 @@ section{
 /* STYLING ALL THE WEBSITE BUTTONS BELOW */
 
 .btn, .white-btn{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 .option-btn{
-    background-color:var(--orange);
+    background-color:var(--secondary);
 }
 
 .delete-btn{
@@ -129,8 +131,16 @@ section{
     cursor: pointer;
 }
 
-.btn:hover, .option-btn:hover, .delete-btn:hover{
-    background-color: hsl(210, 74%, 23%);
+.btn:hover{
+    background-color: rgb(15, 59, 102);
+}
+
+.option-btn:hover{
+    background-color: #73a2c9;
+} 
+
+.delete-btn:hover{
+    background-color: #a10808;
 }
 
 .more-btn{
@@ -169,13 +179,15 @@ section{
 
 .heading h3{
     font-size: 4.5rem;
-    color: rgb(33, 33, 33);
+    color: white;
     text-transform: uppercase;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
 }
 
 .heading p{
     font-size: 2.5rem;
     color: white;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
 }
 
 .heading p a{
@@ -255,7 +267,7 @@ section{
 }
 
 .form-container form p a:hover{
-    color: var(--purple);
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -276,34 +288,15 @@ section{
     max-width: 100%;
     margin: 0 auto;
     padding: 1rem 13rem;
-    background-color: var(--purple);
+    background-color: var(--primary);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#search-btn {
-    width: 15%;
-    margin-left: -10px;
-    padding: 0.1rem 0.7rem;
-    cursor: pointer;
-    
-    font-size: 2rem;
-    border-radius: 1rem;
-    background-color: white;
-}
-#search-btn a {
-    color: var(--light-color);
-}
-#search-btn i{
-    color: var(--black);
-    text-transform: lowercase;
-}
-
-#search-btn a i:hover {
-    color: var(--purple);
-    font-size: 2.3rem;
+.header .flex-top .logo > * {
+    display: flex;
 }
 
 .header .flex-top .icons > * {
@@ -313,12 +306,23 @@ section{
     cursor: pointer;
 }
 
+/* .header .flex-top .icons a {
+    margin-left: 2rem;
+} */
+
 .header .flex-top .icons > *:hover{
     color: var(--black);
 }
 
 .header .flex-top .icons span{
     font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+
+.header .flex-top .logo {
+    margin-right: -100rem;
 }
 
 .header .flex {
@@ -331,15 +335,6 @@ section{
     justify-content: center;
     /* border-bottom: var(--border); */
 
-}
-
-.header .flex .logo {
-    font-size: 3.1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    text-transform:none;
-    color: var(--purple);
-    padding-top: 1rem;  
 }
 
 .header .flex-top .navbar{
@@ -368,8 +363,8 @@ section{
 }
 
 .header .flex-top .navbar ul li a:hover {
-    background-color: var(--orange);
-    color: white;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .header .flex-top .navbar ul li ul{
@@ -378,7 +373,7 @@ section{
     width: 15rem;
     display: none;
 
-    background-color: var(--purple);
+    background-color: var(--primary);
     animation: fadeIn 0.2s linear;
 }
 
@@ -398,7 +393,7 @@ section{
 }
 
 .header .flex .icons > *:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .icons span{
@@ -438,7 +433,7 @@ section{
 }
 
 .header .account-box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .account-box .delete-btn{
@@ -468,7 +463,9 @@ section{
     
     font-size: 5.7rem;
     text-transform: uppercase;
-    color: black;    
+    color: white; 
+    text-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.5);
+
 }
 
 .home .content p{
@@ -479,7 +476,7 @@ section{
     font-size: 1.9rem;
     color: var(--black);
     background-color: rgb(222, 222, 222);
-    border: 2px solid var(--purple);
+    border: 2px solid var(--primary);
     border-radius: 0.5rem;
 }
 
@@ -599,7 +596,7 @@ section{
 .products .box-container .box .price{
     font-size: 2rem;
     padding: 0.7rem 1rem;
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
     left: 1rem;
 }
@@ -616,7 +613,7 @@ section{
 }
 
 .products .box-container .box .fa-eye:hover {
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
 }
 
@@ -629,7 +626,7 @@ section{
 .products .box-container .box .category{
     margin: 1rem;
     font-size: 1.6rem;
-    color: var(--purple);
+    color: var(--primary);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -666,7 +663,7 @@ section{
     padding: 1rem;
     animation: fadeIn 0.2s linear;
     
-    background-color: rgb(175, 235, 235);
+    background-color: var(--secondary);
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     text-align: center;
@@ -718,7 +715,7 @@ section{
 /* STYLING THE QUICK VIEW PAGE */
 
 .quick-view form{
-    max-width: 60rem;
+    max-width: 50rem;
     padding: 2rem;
     margin: 0 auto;
     
@@ -730,8 +727,8 @@ section{
 }
 
 .quick-view form .product-image {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     border: 0.3rem solid var(--black); 
     border-radius: 0.5rem;
 }
@@ -755,7 +752,7 @@ section{
     margin-top: 0.5rem;
     
     text-transform: uppercase;
-    color: var(--purple);
+    color: var(--primary);
     font-size: 1.5rem;
     font-weight: bold;
 
@@ -789,7 +786,7 @@ section{
     padding: 1.2rem 1.4rem;
     font-size: 1.8rem;
     color: var(--black);
-    border: 0.2rem solid var(--purple);
+    border: 0.2rem solid var(--primary);
     border-radius: 0.5rem;
     margin: 1rem 0;
 }
@@ -880,7 +877,7 @@ section{
 .wishlist .box-container .box{
     padding: 2rem;
     text-align: center;
-    background-color: rgb(254, 222, 237);
+    background-color: white;
     border:var(--border);
     box-shadow: var(--box-shadow);
     border-radius: 0.5rem;
@@ -959,7 +956,7 @@ section{
 
 .wishlist .wishlist-total{
     max-width: 1200px;
-    margin:0 auto;
+    margin:3rem auto;
     padding:2rem;
     text-align: center;
     background-color: white;
@@ -971,7 +968,7 @@ section{
  
 .wishlist .wishlist-total p{
     font-size: 2.5rem;
-    color:var(--light-color);
+    color: var(--red);
     margin-bottom: 1rem;
 }
  
@@ -995,7 +992,7 @@ section{
 .shopping-cart .box-container .box{
     padding:2rem;
     text-align: center;
-    background-color: rgb(254, 222, 237);
+    background-color: white;
     border:var(--border);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
@@ -1070,7 +1067,7 @@ section{
  
 .shopping-cart .box-container .box .qty{
     width: 9rem;
-    padding:1.2rem 1.4rem;
+    padding:9px 1.4rem;
     border-radius: .5rem;
     border:var(--border);
     font-size: 1.8rem;
@@ -1142,7 +1139,7 @@ section{
     font-size: 2.5rem;
     color:var(--light-color);
 
-    border-bottom: 4px solid var(--purple);
+    border-bottom: 4px solid var(--primary);
 }
  
 .display-order .grand-total span{
@@ -1202,7 +1199,7 @@ section{
 
 .placed-orders .box-container{
     max-width: 1200px;
-    margin:0 auto;
+    margin:3rem auto;
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
@@ -1312,7 +1309,7 @@ section{
 .earrings .box-container .box .price{
     font-size: 2rem;
     padding: 0.7rem 1rem;
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
     left: 1rem;
 }
@@ -1342,7 +1339,7 @@ section{
 .earrings .box-container .box .category{
     margin: 1rem;
     font-size: 1.6rem;
-    color: var(--purple);
+    color: var(--primary);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -1399,7 +1396,7 @@ section{
 .necklaces .box-container .box .price{
     font-size: 2rem;
     padding: 0.7rem 1rem;
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
     left: 1rem;
 }
@@ -1429,7 +1426,7 @@ section{
 .necklaces .box-container .box .category{
     margin: 1rem;
     font-size: 1.6rem;
-    color: var(--purple);
+    color: var(--primary);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -1484,14 +1481,14 @@ section{
 
 .footer .box-container a i,
 .footer .box-container p i{
-    color:var(--purple);
+    color:var(--primary);
     padding-right: 1rem;
 }
 
 .footer .box-container a:hover{
     text-decoration: underline;
     font-weight: bold;
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .footer .copyright {
@@ -1505,7 +1502,7 @@ section{
 }
 
 .footer .copyright span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 
@@ -1553,7 +1550,7 @@ section{
 
     .header .flex-top .navbar.active{
         -webkit-clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
-        background-color: var(--purple);
+        background-color: var(--primary);
     }
 
     .header .flex-top .navbar ul li{

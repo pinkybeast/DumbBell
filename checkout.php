@@ -64,6 +64,7 @@
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="images/logo-only.png">
     </head>
 
     <body>
@@ -120,10 +121,10 @@
                     <div class="inputBox">
                         <span>Payment Method :</span>
                         <select name="method">
-                            <option value="cash on delivery">cash on delivery</option>
-                            <option value="credit card">credit card</option>
-                            <option value="paypal">paypal</option>
-                            <option value="paytm">paytm</option>
+                            <option value="cash on delivery">Cash on Delivery</option>
+                            <option value="credit card">GoPay</option>
+                            <option value="paypal">DANA</option>
+                            <option value="paytm">Transfer Bank</option>
                         </select>
                     </div>
                     <div class="inputBox">
