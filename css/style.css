@@ -63,9 +63,9 @@ section{
 /* STYLING THE INFO MESSAGE THAT APPEARS ON THE TOP OF WEBSITE */
 
 .message{
-    position: sticky;
-    top: 0;
-    max-width: 1200px;
+    position:relative;
+    bottom: 90%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
@@ -306,9 +306,6 @@ section{
     cursor: pointer;
 }
 
-/* .header .flex-top .icons a {
-    margin-left: 2rem;
-} */
 
 .header .flex-top .icons > *:hover{
     color: var(--black);
@@ -325,6 +322,10 @@ section{
     margin-right: -100rem;
 }
 
+/* .header .flex-top .icons a {
+    margin-left: 2rem;
+} */
+ 
 .header .flex {
     max-width: 1300px;
     margin: 0 auto;
@@ -852,13 +853,14 @@ section{
     border:var(--border);
     background-color: white;
     box-shadow: var(--box-shadow);
-    padding:1.2rem 1.4rem;
+    padding:0.9rem 1.4rem;
     font-size: 1.8rem;
     border-radius: 0.5rem;
 }
  
 .search-form form .btn{
     margin-top: 0;
+    box-shadow: var(--box-shadow);
 }
 
 
