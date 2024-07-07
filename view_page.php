@@ -97,7 +97,7 @@
             <form action="" method="POST" class="box">
                 <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="price">Rp <?php echo $fetch_products['price']; ?></div>
+                <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>
                 <div class="details"><?php echo $fetch_products['details']; ?></div>
                 <input type="number" min="0" max="100" value="1" name="product_quantity" class="qty">

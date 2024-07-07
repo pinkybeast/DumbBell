@@ -114,7 +114,7 @@
                     while($fetch_products = mysqli_fetch_assoc($sql_select_products)){
             ?>
             <div class="box">
-                <div class="price">Rp <?php echo $fetch_products['price']; ?></div>
+                <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
                 <img src="../uploaded_images/<?php echo $fetch_products['image']; ?>" alt="" class="product-image" >
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>

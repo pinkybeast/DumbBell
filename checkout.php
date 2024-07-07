@@ -87,14 +87,14 @@
                 $total_price = ($fetch_cart['price'] * $fetch_cart['quantity']);
                 $grand_total += $total_price;
         ?>    
-            <p> <?php echo $fetch_cart['name'] ?> <span>(<?php echo 'Rp '.$fetch_cart['price'].' x '.$fetch_cart['quantity']  ?>)</span> </p>
+            <p> <?php echo $fetch_cart['name'] ?> <span>(<?php echo 'Rp '.number_format($fetch_cart['price'], 0, ',', '.').' x '.$fetch_cart['quantity']  ?>)</span> </p>
         <?php
             }
             }else{
                 echo '<p class="empty">Your cart is empty</p>';
             }
         ?>
-            <div class="grand-total">Grand Total : <span>Rp <?php echo $grand_total; ?>,-</span></div>
+            <div class="grand-total">Total : <span>Rp <?php echo number_format($grand_total, 0, ',', '.'); ?>,-</span></div>
         </section>
 
         <section class="checkout">

@@ -65,7 +65,7 @@
                     <p>Customer Email: <span><?php echo $fetch_orders['email'] ?></span></p>
                     <p>Customer Address: <span><?php echo $fetch_orders['address'] ?></span></p>
                     <p>Total Products: <span><?php echo $fetch_orders['total_products'] ?></span></p>
-                    <p>Total Price: Rp <span><?php echo $fetch_orders['total_price'] ?></span></p>
+                    <p>Total Price: Rp <span><?php echo number_format($fetch_orders['total_price'], 0, ',', '.') ?></span></p>
                     <p>Payment Method: <span><?php echo $fetch_orders['method'] ?></span></p>
                     <form action="" method="post">
                         <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id'] ?>">

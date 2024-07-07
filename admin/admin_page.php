@@ -51,7 +51,7 @@
                     ?>
                     <h2>
                         <?php
-                            echo 'Rp '.$total_pendings.',-';
+                            echo 'Rp '.number_format($total_pendings, 0, ',', '.').',-';
                         ?>
                     </h2>
                     <p>Total Pendings</p>
@@ -72,7 +72,7 @@
                     ?>
                     <h2>
                         <?php
-                            echo 'Rp '.$total_completed.',-';
+                            echo 'Rp '.number_format($total_completed, 0, ',', '.').',-';
                         ?>
                     </h2>
                     <p>Completed Payments</p>
