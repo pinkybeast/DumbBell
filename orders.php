@@ -1,6 +1,6 @@
 <?php
     include_once('./config/config.php');
-    session_start();
+    include_once('./header.php');
 
     $customer_id = $_SESSION['customer_id'];
 
@@ -28,13 +28,9 @@
 
     <body>
 
-    <?php  
-        include_once('./header.php');
-    ?>
-
         <section class="heading">
             <h3>your orders</h3>
-            <p> <a href="index.php">home</a> / order </p>
+            <p> <a href="home.php">home</a> / order </p>
         </section>
 
         <section class="placed-orders">

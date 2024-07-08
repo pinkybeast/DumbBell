@@ -83,8 +83,8 @@
             <p>Select new product category:</p>
             <select name="update_category" class="box" >
                     <option disabled selected><?php echo $fetch_product['category'] ?></option>
-                    <option value="necklace">Necklace</option>
-                    <option value="earrings">Earrings</option>
+                    <option value="cutting">Cutting</option>
+                    <option value="bulking">Bulking</option>
                     <option value="bracelet">Bracelet</option>
                     <option value="ring">Ring</option>
                     <option value="anklet">Anklet</option>

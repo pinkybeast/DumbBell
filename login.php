@@ -22,7 +22,7 @@
                 $_SESSION['customer_id'] = $row['id'];
                 $_SESSION['customer_name'] = $row['name'];
                 $_SESSION['customer_email'] = $row['email'];
-                header('location:index.php');
+                header('location:home.php');
             }
         }
         else{

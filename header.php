@@ -1,4 +1,18 @@
 <?php
+    include_once('./config/config.php');
+    session_start();
+
+    if(isset($_SESSION['customer_id'])){
+        $customer_id = $_SESSION['customer_id'];
+    }
+
+    if(isset($customer_id)){
+        $sql_select_wishlist_count = mysqli_query($conn, "SELECT * from wishlist WHERE customer_id = '$customer_id'") or die('Query Failed');
+        $wishlist_num_rows = mysqli_num_rows($sql_select_wishlist_count);
+        $sql_select_cart_count = mysqli_query($conn, "SELECT * from cart WHERE customer_id = '$customer_id'") or die('Query Failed');
+        $cart_num_rows = mysqli_num_rows($sql_select_cart_count);
+    }
+
     if(isset($message)){
         foreach($message as $message){
             echo '<div class="message">
@@ -10,17 +24,10 @@
 ?>
 
 <header class="header">
-    
-    <!-- <div class="flex">
-        <a href="index.php" class="logo"> DumbBell</a>        
-    </div> -->
-
     <div class="flex-top">
-        <a href="index.php" class="logo"><img src="images/logo.png" alt="logo" width="17%"></a>
-        <!-- <div id="search-btn"><a href="search_page.php"><i class="fas fa-search"></i> search</a></div> -->
+        <a href="home.php" class="logo"><img src="images/logo.png" alt="logo" width="17%"></a>
         <nav class="navbar">
             <ul>
-                <!-- <li><a href="index.php"><img src="images/logo.png" alt="logo" width="20%"></a></li> -->
                 <li><a href="search_page.php">Search</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="orders.php">Orders</a></li>
@@ -39,24 +46,18 @@
         </div>  
         <div class="icons">
             <div id="customer-btn" class="fas fa-user"></div>
-
-            <?php
-                $sql_select_wishlist_count = mysqli_query($conn, "SELECT * from wishlist WHERE customer_id = '$customer_id'") or die('Query Failed');
-                $wishlist_num_rows = mysqli_num_rows($sql_select_wishlist_count);
-            ?>
-            <a href="wishlist.php"><i class="fa fa-heart"></i><span>(<?php echo $wishlist_num_rows; ?>)</span></a>
-
-            <?php
-                $sql_select_cart_count = mysqli_query($conn, "SELECT * from cart WHERE customer_id = '$customer_id'") or die('Query Failed');
-                $cart_num_rows = mysqli_num_rows($sql_select_cart_count);
-            ?>
-            <a href="cart.php"><i class="fa fa-shopping-cart"></i><span>(<?php echo $cart_num_rows; ?>)</span></a>
+            <a href="wishlist.php"><i class="fa fa-heart"></i><span>(<?php 
+            if(isset($customer_id)) echo $wishlist_num_rows; else echo '0'; ?>)</span></a>
+            <a href="cart.php"><i class="fa fa-shopping-cart"></i><span>(<?php 
+            if(isset($customer_id)) echo $cart_num_rows; else echo '0'; ?>)</span></a>
         </div>
     </div>
 
     <div class="account-box">
-        <p>username: <span><?php echo $_SESSION['customer_name']; ?></span></p>
-        <p>email: <span><?php echo $_SESSION['customer_email']; ?></span></p>
-        <a href="./logout.php" class="delete-btn">logout</a>
+        <p>username: <span><?php 
+        if(isset($customer_id)) echo $_SESSION['customer_name']; else echo 'Guest'; ?></span></p>
+        <p>email: <span><?php 
+        if(isset($customer_id)) echo $_SESSION['customer_email']; else echo 'Guest'; ?></span></p>
+        <?php if(isset($customer_id)) echo '<a href="./logout.php" class="delete-btn">logout</a>'; ?>
     </div> 
 </header>

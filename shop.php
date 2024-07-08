@@ -1,12 +1,5 @@
 <?php
     include_once('./config/config.php');
-    session_start();
-
-    $customer_id = $_SESSION['customer_id'];
-
-    if(!isset($customer_id)){
-        header('location:login.php');
-    }
 
     if(isset($_POST['add_to_wishlist'])){
         $product_id = $_POST['product_id'];
@@ -83,7 +76,7 @@
     ?>
         <section class="heading">
             <h3>Our Shop</h3>
-            <p><a href="index.php">home</a> / shop</p>
+            <p><a href="home.php">home</a> / shop</p>
         </section>
 
         <section class="filter">
@@ -106,9 +99,6 @@
         <section class="products">
 
             <h1 class="title"> all products </h1> 
-            
-            <!-- <i class="fa-solid fa-filter" style="color:var(--red); font-size:3rem; padding:0.5rem; margin-left:5rem; border: var(--border);"></i> -->
-
             <div class="box-container">
 
                 <?php

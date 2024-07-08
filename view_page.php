@@ -69,7 +69,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo $fetch_products['name']; ?></title>
+        <title><?php echo $fetch_products['name']; ?> | DumbBell</title>
 
         <!--font awesome cdnjs link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -120,7 +120,7 @@
             ?>
             
             <div class="more-btn">
-                <a href="index.php" class="option-btn">go to home page</a>
+                <a href="home.php" class="option-btn">go to home page</a>
             </div>
 
         </section>

@@ -1,6 +1,6 @@
 <?php
     include_once('./config/config.php');
-    session_start();
+    include_once('./header.php');
 
     $customer_id = $_SESSION['customer_id'];
 
@@ -29,7 +29,7 @@
             if(mysqli_num_rows($sql_check_wishlist_num) > 0){
                 mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
             }
-            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '', '$product_image')") or die('Query Failed');
+            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
             $message[] = 'Added product to cart successfully!';
         }
     }
@@ -71,7 +71,7 @@
 
         <section class="heading">
             <h3>Your wishlist</h3>
-            <p><a href="index.php">home</a> / wishlist</p>
+            <p><a href="home.php">home</a> / wishlist</p>
         </section>
 
         <section class="wishlist">
