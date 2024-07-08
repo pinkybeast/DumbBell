@@ -56,7 +56,7 @@
                 <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
                 <p> payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
                 <p> your orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-                <p> total price : <span>Rp <?php echo number_format($fetch_orders['price'], 0, ',', '.'); ?>,-</span> </p>
+                <p> total price : <span>Rp <?php echo number_format($fetch_orders['total_price'], 0, ',', '.'); ?>,-</span> </p>
                 <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){echo 'tomato'; }else{echo 'green';} ?>"><?php echo $fetch_orders['payment_status']; ?></span> </p>
             </div>
             <?php
