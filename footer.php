@@ -4,10 +4,10 @@
 
         <div class="box">
             <h3>Quick Links</h3>
-            <a href="home.php">Home</a>
-            <a href="about.php">About</a>
+            <a href="home.php">Search</a>
             <a href="shop.php">Our Shop</a>
             <a href="custom.php">Send Us A Message!</a>
+            <a href="about.php">About</a>
         </div>
 
         <div class="box">
@@ -19,6 +19,7 @@
         </div>
 
         <div class="box">
+            <h3>Contact Info</h3>
             <p><i class="fas fa-phone"></i> +62-822-9904-3443 </p>
             <p><i class="fas fa-envelope"></i> dumbbell@gmail.com </p>
             <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>

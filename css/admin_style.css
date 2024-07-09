@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    /*--purple: #ac27ac;*/
-    --purple: hsl(210, 76%, 31%);
-    /* --orange:#e67716; */
-    --orange: rgb(56, 191, 196);
+    --primary: #134f8b;
+    --secondary: #96C9F4;
     --red:#cb0303;
     --black: #333;
     --light-color:#666;
@@ -28,7 +26,7 @@
 }
 
 *::selection{
-    background-color: var(--purple);
+    background-color: var(--primary);
     color: white;
 }
 
@@ -42,7 +40,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 html{
@@ -117,11 +115,11 @@ section{
 }
 
 .btn, .white-btn{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 .option-btn{
-    background-color:var(--orange);
+    background-color:var(--secondary);
 }
 
 .delete-btn{
@@ -141,8 +139,16 @@ section{
     cursor: pointer;
 }
 
-.btn:hover, .option-btn:hover, .delete-btn:hover{
-    background-color: var(--black);
+.btn:hover{
+    background-color: #0f3b66;
+}
+
+.option-btn:hover{
+    background-color: #73a2c9;
+} 
+
+.delete-btn:hover{
+    background-color: #a10808;
 }
 
 @keyframes fadeIn{
@@ -184,7 +190,7 @@ section{
 }
 
 .header .flex .logo span{
-    color:var(--purple);
+    color:var(--primary);
 }
 
 .header .flex .navbar a{
@@ -194,7 +200,7 @@ section{
 }
 
 .header .flex .navbar a:hover{
-    color:var(--orange);
+    color:var(--primary);
 }
 
 .header .flex .icons div{
@@ -205,7 +211,7 @@ section{
 }
 
 .header .flex .icons div:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .account-box{
@@ -236,7 +242,7 @@ section{
 }
 
 .header .flex .account-box p span{
-    color: var(--purple)
+    color: var(--primary)
 }
 
 .header .flex .account-box .delete-btn{
@@ -281,7 +287,7 @@ section{
     padding: 1.5rem;
 
     background-color: var(--light-bg);
-    color: var(--purple);
+    color: var(--primary);
     font-size: 2rem;
     border: var(--border);
     border-radius: 0.5rem;
@@ -371,6 +377,7 @@ section{
 .show-products .box-container .product-image{
     width: 100%;
     height: 100%;
+    border: var(--border);
 }
 
 .show-products .box-container .price {
@@ -379,7 +386,7 @@ section{
     top:1rem;
     left:1rem;
 
-    background-color: var(--purple);
+    background-color: var(--primary);
     border-radius: 0.5rem;
     color: white;
     font-size: 1.8rem;
@@ -397,7 +404,7 @@ section{
     padding:1.5rem 1rem;
     
     text-transform: uppercase;
-    color: var(--purple);
+    color: var(--primary);
     font-size: 1.4rem;
     font-weight: bold;
 
@@ -519,7 +526,7 @@ section{
 }
 
 .placed-orders .box-container .box p span{
-   color:var(--purple);
+   color:var(--primary);
 }
 
 .placed-orders .box-container .box form{
@@ -568,7 +575,7 @@ section{
 }
 
 .users .box-container .box p span{
-    color:var(--purple);
+    color:var(--primary);
 }
 
 .users .box-container .box .delete-btn{
@@ -605,7 +612,7 @@ section{
 }
 
 .messages .box-container .box p span{
-   color:var(--purple);
+   color:var(--primary);
 }
 
 .messages .box-container .product-image{
@@ -615,7 +622,7 @@ section{
 }
 
 .messages .box-container .box p b, .messages .box-container .box p b span{
-    color: var(--orange);
+    color: var(--primary);
     text-transform: uppercase;
     font-size: 1.9rem;
     text-align: center;

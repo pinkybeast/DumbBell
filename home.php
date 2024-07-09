@@ -21,9 +21,7 @@
     </head>
 
     <body>
-
         <section class="home">
-
             <div class="content">
                 <h3>DumbBell Website</h3>
                 <p>
@@ -36,9 +34,7 @@
         </section>
 
         <section class="category">
-
             <div class="flex">
-
                 <div class="image">
                     <img src="./images/bulking1.jpg" alt="">
                 </div>
@@ -54,7 +50,6 @@
             </div>
 
             <div class="flex">
-                
                 <div class="content">
                     <h3>Cutting</h3>
                     <p>
@@ -70,18 +65,11 @@
             </div>
 
         </section>
-
-       
-
         <section class="products">
-
             <h1 class="title"> Our Products </h1>
-
             <div class="box-container">
-
                 <?php
                     $sql_select_products = mysqli_query($conn, "SELECT * FROM products LIMIT 3 OFFSET 9") or die('Query Failed');
-
                     if(mysqli_num_rows($sql_select_products) > 0){
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  
                 ?>

@@ -132,7 +132,7 @@ section{
 }
 
 .btn:hover{
-    background-color: rgb(15, 59, 102);
+    background-color: #0f3b66;
 }
 
 .option-btn:hover{
@@ -296,7 +296,8 @@ section{
 }
 
 .header .flex-top .logo > * {
-    display: flex;
+    display:inline-block;
+    width: 17%;
 }
 
 .header .flex-top .icons > * {
@@ -321,10 +322,6 @@ section{
 .header .flex-top .logo {
     margin-right: -100rem;
 }
-
-/* .header .flex-top .icons a {
-    margin-left: 2rem;
-} */
  
 .header .flex {
     max-width: 1300px;
@@ -404,6 +401,42 @@ section{
 #menu-btn {
     display: none;
 }
+
+.header .account-guest ul {
+    position: absolute;
+    left: 0;
+    width: 15rem;
+    display: none;
+
+    background-color: var(--primary);
+    animation: fadeIn 0.2s linear;
+}
+
+.header .account-guest ul li {
+    float: left;
+    position: relative;
+}
+
+.header .account-guest ul li:hover {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.header .account-guest ul li a{
+    font-size: 1.9rem;
+    padding: 1rem 2rem;
+    display: block;
+    color: white;
+    text-transform: capitalize;
+}
+
+.header .account-guest ul li a:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+
 
 .header .account-box{
     position: absolute;
@@ -523,44 +556,8 @@ section{
     flex-wrap: wrap-reverse;
 }
 
-.home2{
-    min-height: 70vh;
-    background: url('../images/bg2.jpg') no-repeat;
-    background-size: cover;
-    background-position:center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.home2 .content2 {
-    text-align: center;
-    padding-left: 5rem;
-}
-
-.home2 .content2 h3{
-    padding-bottom: 0.8rem;
-    
-    font-size: 5.4rem;
-    text-transform: uppercase;
-    color: white;    
-}
-
-.home2 .content2 p{
-    max-width: 60rem;
-    margin: 1rem auto;
-
-    line-height: 2;
-    font-size: 1.9rem;
-    color: black;
-    background-color: rgb(141, 228, 244); 
-    border-radius: 0.5rem;
-    text-align: center;
-}
-
 .products .box-container{
-    max-width: 1300px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 2.5rem;
     padding-bottom: 5rem;
@@ -578,12 +575,13 @@ section{
     border-radius: 0.5rem;
     padding: 2rem;
     text-align: center;
-    position: relative;
+    position:relative;
 }
 
 .products .box-container .box .product-image {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    border: var(--border);
     object-fit: cover;
 }
 
@@ -945,7 +943,7 @@ section{
 .wishlist .box-container .box .color{
     display: inline-block;
     padding:1.3rem 1rem;
-    width: 45%;
+    width: 50%;
     margin: 0.5rem 0;
     background-color: white;
     
@@ -1006,6 +1004,7 @@ section{
  .shopping-cart .box-container .box .product-image{
     height: 100%;
     width: 100%;
+    border: var(--border);
 }
  
 .shopping-cart .box-container .box .fa-eye,
@@ -1278,13 +1277,14 @@ section{
 /* STYLING THE BULKING PAGE */
 
 .bulking .box-container{
-    max-width: 500px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 2.5rem;
     padding-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 31rem);
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, 29rem);
+    column-gap: 4rem;
+    row-gap: 4rem;
     align-items: flex-start;
     justify-content: center;
 }
@@ -1301,7 +1301,8 @@ section{
 
 .bulking .box-container .box .product-image {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    border: var(--border);
     object-fit: cover;
 }
 
@@ -1367,11 +1368,13 @@ section{
 
 /* STYLING THE CUTTING PAGE BELOW */
 .cutting .box-container{
-    max-width: 1300px;
+    max-width: 80%;
     margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 33rem);
-    gap: 1.5rem;
+    gap: 4rem;
     align-items: flex-start;
     justify-content: center;
 }
@@ -1388,7 +1391,8 @@ section{
 
 .cutting .box-container .box .product-image {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    border: var(--border);
     object-fit: cover;
 }
 
@@ -1580,14 +1584,6 @@ section{
     }
 
     .home .content p{
-        font-size: 1.7rem;
-    }
-
-    .home2 .content2 h3{
-        font-size: 4.2rem;
-    }
-
-    .home2 .content2 p{
         font-size: 1.7rem;
     }
 }

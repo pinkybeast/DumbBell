@@ -25,7 +25,7 @@
 
 <header class="header">
     <div class="flex-top">
-        <a href="home.php" class="logo"><img src="images/logo.png" alt="logo" width="17%"></a>
+        <a href="home.php" class="logo"><img src="images/logo.png" alt="logo"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="search_page.php">Search</a></li>
@@ -33,12 +33,18 @@
                 <li><a href="orders.php">Orders</a></li>
                 <li><a href="custom.php">Message</a></li>
                 <li><a href="about.php">About</a></li>
+                <?php
+                    if(!isset($customer_id)){
+                ?>
                 <li><a href="#">Account <i class="fa-solid fa-caret-down"></i></a>
                     <ul>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="register.php">Register</a></li>
                     </ul>
                 </li>
+                <?php
+                    }
+                ?>
             </ul>
         </nav>
         <div class="icons">
@@ -53,11 +59,18 @@
         </div>
     </div>
 
-    <div class="account-box">
-        <p>username: <span><?php 
-        if(isset($customer_id)) echo $_SESSION['customer_name']; else echo 'Guest'; ?></span></p>
-        <p>email: <span><?php 
-        if(isset($customer_id)) echo $_SESSION['customer_email']; else echo 'Guest'; ?></span></p>
-        <?php if(isset($customer_id)) echo '<a href="./logout.php" class="delete-btn">logout</a>'; ?>
-    </div> 
+    <?php
+            if(isset($customer_id)){
+                echo '<div class="account-box">
+                    <p>username: <span>'.$_SESSION['customer_name'].'</span></p>
+                    <p>email: <span>'.$_SESSION['customer_email'].'</span></p>
+                    <a href="./logout.php" class="delete-btn">logout</a>
+                </div>';
+            } else {
+                echo '<div class="account-box">
+                        <p>username: <span>Guest</span></p>
+                        <p>email: <span>Guest</span></p>
+                    </div>';
+            }
+        ?>
 </header>

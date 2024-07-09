@@ -31,7 +31,6 @@
             <div class="flex">
 
                 <div class="image">
-                    <img src="./images/set5.png" alt="">
                 </div>
 
                 <div class="content">
@@ -50,14 +49,6 @@
                 </div>
 
                 <div class="image">
-                    <img src="./images/set4.png" alt="">
-                </div>
-            </div>
-
-            <div class="flex">
-                
-                <div class="image">
-                    <img src="./images/butterfly1.jpg" alt="">
                 </div>
             </div>
         </section>
