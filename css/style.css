@@ -1426,7 +1426,7 @@ section{
 }
 
 .cutting .box-container .box .fa-eye:hover {
-    background-color: var(--light-pink);
+    background-color: var(--primary);
     color: white;
 }
 
