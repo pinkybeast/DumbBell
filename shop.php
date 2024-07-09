@@ -1,5 +1,6 @@
 <?php
     include_once('./config/config.php');
+    include_once('./header.php');
 
     if(isset($_POST['add_to_wishlist'])){
         $product_id = $_POST['product_id'];
@@ -70,10 +71,6 @@
     </head>
 
     <body>
-
-    <?php  
-        include_once('./header.php');
-    ?>
         <section class="heading">
             <h3>Our Shop</h3>
             <p><a href="home.php">home</a> / shop</p>
@@ -91,7 +88,7 @@
                         <option value="Pre-Workout">Pre-Workout</option>
                     </select>
                     <input type="submit" value="filter product" name="filter_product" class="btn" >  
-                </form> 
+                </form>
 
             </div>
         </section>
