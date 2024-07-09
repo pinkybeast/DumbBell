@@ -25,8 +25,8 @@
             <div class="content">
                 <h3>DumbBell Website</h3>
                 <p>
-                DumbBell is a user-friendly e-commerce platform specifically designed to cater to individuals who are new to lifting weights or just starting their gym journey.
-                The website provides a curated selection of supplements tailored to beginners, aiming to support their fitness goals and enhance their workout experience.
+                DumbBell adalah platform e-commerce user friendly yang dirancang khusus untuk melayani individu yang baru dalam angkat beban atau baru memulai perjalanan gym mereka.
+                Website ini menyediakan pilihan suplemen yang dirancang khusus untuk pemula, yang bertujuan untuk mendukung target mereka dan memaksimalkan pengalaman berolahraga.
                 </p>
                 <a href="about.php" class="btn">More About Us</a>
             </div>
@@ -42,8 +42,7 @@
                 <div class="content">
                     <h3>Bulking</h3>
                     <p>
-                    Bulking is a phase in a bodybuilder or athlete's training regimen focused on gaining muscle mass and strength. During this period, individuals consume a calorie surplus, meaning they eat more calories than they burn, to fuel muscle growth and recover from intense workouts.
-                    The primary goals during bulking are to increase muscle size and enhance overall strength.
+                    Bulking juga merupakan strategi yang bertujuan untuk membentuk dan meningkatkan massa otot di dalam tubuh. Pada dasarnya, bulking adalah program diet menambah berat badan yang dilakukan dengan cara menambah asupan kalori melebihi kebutuhan kalori harian tubuh selama periode waktu tertentu. Lalu, setelah mencapai target berat badan, pola makan pada program bulking akan diatur dengan cara menurunkan jumlah asupan kalori secara bertahap.
                     </p>
                     <a href="bulking.php" class="btn">Shop All Bulking</a>
                 </div>
@@ -53,8 +52,8 @@
                 <div class="content">
                     <h3>Cutting</h3>
                     <p>
-                    Cutting is the phase aimed at reducing body fat while preserving muscle mass. During this period, individuals eat fewer calories than they burn, creating a calorie deficit. Maintaining a high protein intake is important to prevent muscle loss.
-                    Cardiovascular exercise is added to the routine to increase calorie expenditure. Strength training continues to ensure muscles are preserved, even as body fat decreases.
+                    Cutting adalah program mengurangi lemak di tubuh bersamaan dengan peningkatan massa otot. Terdapat dua pendekatan dalam program cutting, yaitu diet dan olahraga yang harus dilakukan secara beriringan karena tanpa salah satunya, hasilnya bisa menjadi tidak maksimal. 
+                        Diet cutting tidak cukup hanya mengatur asupan makan saja. Dibutuhkan juga perhitungan detail terhadap kalori, protein, lemak, dan karbohidrat setiap harinya.
                     </p>
                     <a href="cutting.php" class="btn">Shop All Cuttings</a>
                 </div>

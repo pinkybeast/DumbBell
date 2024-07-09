@@ -27,13 +27,12 @@
 
         <div class="box">
             <h3>Contact Us</h3>
-            <a href="https://www.instagram.com/dumbbell/" target="_blank"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram </a>
-            <a href="https://www.facebook.com/dumbbell"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i> Facebook </a>
-            <a href="https://www.tiktok.com/@dumbbell"><i class="fab fa-tiktok"></i> TikTok </a>
+            <a href="https://www.instagram.com/mhaikalhalim/" target="_blank"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram </a>
+            <a href="https://www.tiktok.com/@pinkybeast"><i class="fab fa-tiktok"></i> TikTok </a>
         </div>
     </div>
 
     <div class="copyright">
-        &copy; <?php echo date('Y'); ?> DumbBell. All rights reserved.</span> 
+        &copy; <?php echo date('Y'); ?> DumbBell Developers. All rights reserved.</span> 
     </div>
 </section>

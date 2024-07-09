@@ -35,7 +35,7 @@
 
                 <div class="content">
                     <h3>why DumbBell?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum! Lorem ipsum dolor sit amet.</p>
+                    <p>Karena, DumbBell adalah Website E-Commerce ideal untuk membeli suplemen gym, terutama bagi pemula, karena website ini mempunyai tampilan yang <strong>User Friendly</strong> dan juga mudah di navigasikan. Dengan fokus pada kebutuhan pemula, DumbBell menyediakan pengalaman belanja yang komprehensif, terpercaya, dan mudah digunakan, menjadikannya platform pilihan untuk suplemen gym.</p>
                     <a href="shop.php" class="btn">shop now</a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 
                 <div class="content">
                     <h3>what DumbBell provide?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem repellendus aliquid cumque similique recusandae, praesentium deleniti animi fugiat laborum!</p>
+                    <p>Disini, kami menyediakan berbagai fitur unggulan untuk pengalaman belanja suplemen yang optimal, yaitu <strong> Kategori suplemen yang lengkap bagi pemula </strong>, <strong>Kemudahan Berbelanja</strong>, dan juga <strong> Layanan Pelanggan Responsif </strong></p>
                     <a href="custom.php" class="btn">contact us</a>
                 </div>
 
