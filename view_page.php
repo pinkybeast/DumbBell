@@ -120,8 +120,6 @@
                     <a href="login.php" class="option-btn">add to wishlist</a>
                     <a href="login.php" class="btn">add to cart</a>
                 <?php endif; ?>
-                <!-- <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
-                <input type="submit" value="add to cart" name="add_to_cart" class="btn"> -->
             </form>
             <?php
                     }

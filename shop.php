@@ -3,6 +3,12 @@
     include_once('./header.php');
 
     if(isset($_POST['add_to_wishlist'])){
+        if (!isset($_SESSION['customer_id'])) {
+            header('Location: login.php');
+            exit();
+        }
+
+        $customer_id = $_SESSION['customer_id'];
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
@@ -26,6 +32,12 @@
     }
 
     if(isset($_POST['add_to_cart'])){
+        if (!isset($_SESSION['customer_id'])) {
+            header('Location: login.php');
+            exit();
+        }
+
+        $customer_id = $_SESSION['customer_id'];
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
@@ -121,8 +133,13 @@
                         <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>" >
                         <input type="hidden" name="product_color" value="<?php echo $fetch_products['color']; ?>" >
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>" >
-                        <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
-                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                        <?php if(isset($_SESSION['customer_id'])): ?>
+                            <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
+                            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                        <?php else: ?>
+                            <a href="login.php" class="option-btn">add to wishlist</a>
+                            <a href="login.php" class="btn">add to cart</a>
+                        <?php endif; ?>
                     </form>
                 <?php
                         }
