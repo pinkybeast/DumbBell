@@ -1,6 +1,5 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +18,12 @@
         <link rel="icon" href="images/logo-only.png">
 
     <body>
+        <?php
+            include_once('./header.php');
+        ?>
         <section class="heading">
             <h3>Products For Bulking</h3>
-            <p><a href="home.php">home</a> / shop</p>
+            <p><a href="/">home</a> / shop</p>
         </section>
 
         <section class="bulking">
@@ -49,8 +51,13 @@
                     <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>" >
                     <input type="hidden" name="product_color" value="<?php echo $fetch_products['color']; ?>" >
                     <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>" >
-                    <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
-                    <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                    <?php if(isset($_SESSION['customer_id'])): ?>
+                        <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
+                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                    <?php else: ?>
+                        <a href="login.php" class="option-btn">add to wishlist</a>
+                        <a href="login.php" class="btn">add to cart</a>
+                    <?php endif; ?>
                 </form>
                 <?php
                         }

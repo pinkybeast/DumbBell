@@ -25,7 +25,7 @@
 
 <header class="header">
     <div class="flex-top">
-        <a href="home.php" class="logo"><img src="images/logo.png" alt="logo"></a>
+        <a href="/" class="logo"><img src="images/logo.png" alt="logo"></a>
         <nav class="navbar">
             <ul>
                 <li><a href="search_page.php">Search</a></li>

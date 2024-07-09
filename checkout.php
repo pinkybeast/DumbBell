@@ -1,6 +1,6 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
+
     $customer_id = $_SESSION['customer_id'];
 
     if(!isset($customer_id)){
@@ -67,10 +67,12 @@
     </head>
 
     <body>
-
+        <?php
+            include_once('./header.php');
+        ?>
         <section class="heading">
             <h3>Checkout order</h3>
-            <p><a href="home.php">home</a> / checkout</p>
+            <p><a href="/">home</a> / checkout</p>
         </section>
 
         <section class="display-order">

@@ -1,6 +1,5 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
 
     if(isset($_POST['add_to_wishlist'])){
         if (!isset($_SESSION['customer_id'])) {
@@ -82,14 +81,13 @@
 
         <!--custom css file link -->
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
-        <link rel="icon" href="images/logo-only.png">
+        <link rel="icon" href="images/logo-only.png" type="image/png">
     </head>
 
     <body>
-
-    <?php  
-        include_once('./header.php');
-    ?>
+        <?php
+            include_once('./header.php');
+        ?>
         <section class="quick-view">
             <h1 class="title"> product details </h1>
             <?php
@@ -131,7 +129,7 @@
             ?>
             
             <div class="more-btn">
-                <a href="home.php" class="option-btn">go to home page</a>
+                <a href="/" class="option-btn">go to home page</a>
             </div>
 
         </section>

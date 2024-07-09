@@ -1,6 +1,5 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +19,12 @@
     </head>
 
     <body>
-
+        <?php
+            include_once('./header.php');
+        ?>
         <section class="heading">
             <h3>About DumbBell</h3>
-            <p><a href="home.php">home</a> / about</p>
+            <p><a href="/">home</a> / about</p>
         </section>
 
         <section class="about">

@@ -1,6 +1,5 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
 
     if(isset($_POST['add_to_wishlist'])){
         if (!isset($_SESSION['customer_id'])) {
@@ -83,9 +82,12 @@
     </head>
 
     <body>
+        <?php
+            include_once('./header.php');
+        ?>
         <section class="heading">
             <h3>Our Shop</h3>
-            <p><a href="home.php">home</a> / shop</p>
+            <p><a href="/">home</a> / shop</p>
         </section>
 
         <section class="filter">

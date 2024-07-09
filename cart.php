@@ -1,6 +1,5 @@
 <?php
     include_once('./config/config.php');
-    include_once('./header.php');
 
     $customer_id = $_SESSION['customer_id'];
 
@@ -45,14 +44,13 @@
     </head>
 
     <body>
-
     <?php  
         include_once('./header.php');
     ?>
 
         <section class="heading">
             <h3>shopping cart</h3>
-            <p><a href="home.php">home</a> / cart</p>
+            <p><a href="/">home</a> / cart</p>
         </section>
 
         <section class="shopping-cart">
