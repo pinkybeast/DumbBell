@@ -63,7 +63,7 @@ section{
 /* STYLING THE INFO MESSAGE THAT APPEARS ON THE TOP OF WEBSITE */
 
 .message{
-    position:relative;
+    position: fixed;
     bottom: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -612,7 +612,7 @@ section{
 }
 
 .products .box-container .box .fa-eye:hover {
-    background-color: var(--primary);
+    background-color: var(--black);
     color: white;
 }
 
@@ -1336,7 +1336,7 @@ section{
 }
 
 .bulking .box-container .box .fa-eye:hover {
-    background-color: var(--primary);
+    background-color: var(--black);
     color: white;
 }
 
@@ -1426,7 +1426,7 @@ section{
 }
 
 .cutting .box-container .box .fa-eye:hover {
-    background-color: var(--primary);
+    background-color: var(--black);
     color: white;
 }
 

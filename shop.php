@@ -1,6 +1,6 @@
 <?php
     include_once('./config/config.php');
-
+    include_once('./header.php');
     if(isset($_POST['add_to_wishlist'])){
         if (!isset($_SESSION['customer_id'])) {
             header('Location: login.php');
@@ -28,6 +28,7 @@
             mysqli_query($conn, "INSERT INTO wishlist(customer_id, pid, name, price, color, category, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_image')") or die('Query Failed');
             $message[] = 'Added product to wishlist';
         }
+
     }
 
     if(isset($_POST['add_to_cart'])){
