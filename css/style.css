@@ -726,8 +726,9 @@ section{
 }
 
 .quick-view form .product-image {
-    width: 85%;
-    height: 85%;
+    margin-top: 2.5rem;
+    width: 90%;
+    height: 450px;
     border: 0.3rem solid var(--black); 
     border-radius: 0.5rem;
 }
