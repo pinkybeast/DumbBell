@@ -87,7 +87,7 @@
         ?>
         <section class="heading">
             <h3>Our Shop</h3>
-            <p><a href="/">home</a> / shop</p>
+            <p><a href="home.php">home</a> / shop</p>
         </section>
 
         <section class="filter">

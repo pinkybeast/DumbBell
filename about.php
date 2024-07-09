@@ -24,7 +24,7 @@
         ?>
         <section class="heading">
             <h3>About DumbBell</h3>
-            <p><a href="/">home</a> / about</p>
+            <p><a href="home.php">home</a> / about</p>
         </section>
 
         <section class="about">

@@ -23,7 +23,7 @@
         ?>
         <section class="heading">
             <h3>Products for Cutting</h3>
-            <p><a href="/">home</a> / shop</p>
+            <p><a href="home.php">home</a> / shop</p>
         </section>
 
         <section class="cutting">

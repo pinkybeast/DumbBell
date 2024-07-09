@@ -24,7 +24,7 @@
         ?>
         <section class="heading">
             <h3>Search Products</h3>
-            <p><a href="/">home</a> / search</p>
+            <p><a href="home.php">home</a> / search</p>
         </section>
 
         <section class="search-form">

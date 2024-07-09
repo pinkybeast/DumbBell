@@ -1,5 +1,6 @@
 <?php
     include_once('./config/config.php');
+    include_once('./header.php');
 
     $customer_id = $_SESSION['customer_id'];
 
@@ -55,7 +56,7 @@
         ?>
         <section class="heading">
             <h3>Let Us Know What You Have In Mind!</h3>
-            <p> <a href="/">home</a> / message us! </p>
+            <p> <a href="home.php">home</a> / message us! </p>
         </section>
 
         <section class="custom">
