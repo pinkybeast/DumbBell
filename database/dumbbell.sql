@@ -44,7 +44,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `customer_id`, `pid`, `name`, `price`, `color`, `category`, `quantity`, `image`) VALUES
-(40, 4, 23, 'Stars Are Blind', 500, 'blue', 'earrings', 1, 'stars_are_blind2.jpg');
+(45, 4, 3, 'L-Men Platinum Strawberry 800g', 400000, 'multi-color', 'Whey Protein', 3, 'lmenstrawberry.jpg'),
+(46, 4, 13, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'multi-color', 'Whey Protein', 1, 'optimumwhey.jpg'),
+(47, 4, 20, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'multi-color', 'Pre-Workout', 1, 'fitlifeprewo.jpg');
 
 -- --------------------------------------------------------
 
