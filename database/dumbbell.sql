@@ -107,7 +107,7 @@ CREATE TABLE `products` (
   `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `price` int(100) NOT NULL,
-  `color` varchar(100) NOT NULL,
+  `color` varchar(100),
   `category` varchar(100) NOT NULL,
   `details` text NOT NULL,
   `image` varchar(100) NOT NULL
@@ -120,11 +120,11 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `price`, `color`, `category`, `details`, `image`) VALUES
 (2, 'Evolene Evomass Gainer Coklat 912gr', 270000, 'pink', 'Gainer', 'Evolene Evomass Gainer merupakan susu penambah berat badan dan menambah massa otot dengan kandungan 52 gram protein, 932 kkal, 11 gram glutamine, dan 8,5 gram BCAA setiap 1 servings. Dengan kandungan protein yang tinggi, susu ini sangat cepat diserap pada tubuh agar massa otot cepat terbentuk. Evolene Evomass Gainer sudah bersertifikasi BPOM dan halal. Bagus Untuk Bulking', 'evomasswheycoklat.jpg'),
 (3, 'L-Men Platinum Strawberry 800g', 400000, 'multi-color', 'Whey Protein', 'L-Men Platinum Susu Whey Protein merupakan suplemen protein yang cocok untuk melengkapi kegiatan olahraga terutama untuk latihan beban, gym, dan fitness. L-Men Platinum yang tinggi whey protein sebanyak 25 gram/saji, dan juga memiliki kandungan Asam Amino yang lebih tinggi dari kebanyakan susu Whey lainnya (5,7gr BCAA).', 'lmenstrawberry.jpg'),
-(4, 'Evolene Prevo Pre-Workout Green Apple 225gr', 375000, 'pink', 'Pre-Workout', 'Merupakan suplemen susu sebelum melakukan aktivitas olahraga agar menghasilkan energi yang ekstra dan massa otot yang maksimal, idealnya dikonsumsi 30 menit sebelum latihan. Susu ini memiliki komposisi Beta-Alanin 1500mg, Kreatin Monohidrat 500mg, Taurine 250mg,dan L Arginine 250mg. Dengan kandungan yang berkhasiat akan menambah endurance massa otot selama berolahraga.', 'prevoapple.jpg'),
+(4, 'Evolene Prevo Pre-Workout Green Apple 225gr', 375000, 'pink', 'Pre-Workout', 'Merupakan suplemen susu sebelum melakukan aktivitas olahraga agar menghasilkan energi yang ekstra dan massa otot yang maksimal, idealnya dikonsumsi 30 menit sebelum latihan. Susu ini memiliki komposisi Beta-Alanin 1500mg, Kreatin Monohidrat 500mg, Taurine 250mg,dan L Arginine 250mg. Dengan kandungan yang berkhasiat akan menambah endurance massa otot selama berolahraga.', 'prevogreenapple.jpg'),
 (5, 'Muscle First Creatine Bubble Gum ', 220000, 'pink', 'Creatine', 'Creatine berfungsi untuk meningkatkan produksi ATP (adenosine triphosphate), yang merupakan sumber energi utama untuk kontraksi otot. Dengan meningkatkan produksi ATP, creatine memberikan energi tambahan selama latihan intensif. Selain itu, creatine menarik air ke dalam sel otot, yang dapat meningkatkan ukuran otot secara sementara, serta membantu meningkatkan sintesis protein dalam otot, yang penting untuk pertumbuhan dan pemulihan otot.', 'm1creatinegum.jpg'),
 (6, 'Muscle First Pro Gainer Honeydew Melon 900gr', 250000, 'multi-color', 'Gainer', 'Pro Gainer dari Muscle First adalah suplemen mass gainer efektif untuk meningkatkan berat badan secara sehat dan mendukung pertumbuhan massa otot optimal. Diformulasikan dengan cermat, menggunakan serat gandum alami untuk hasil yang efektif dan berkelanjutan. Mengandung 55g protein & 1030kkal per sajian serta sudah tersertifikasi GMP, Halal MUI, BPOM, HACCP, & ISO 22000.', 'm1gainermelon.jpg'),
 (7, 'EvoWhey Evolene Whey Protein 1750gr 50 Sachet Vanilla', 720000, 'red', 'Whey Protein', 'Evowhey merupakan whey protein praktis untuk mendukung kebutuhan pembentukan badan dan ototmu. Cocok untuk pemula hingga expert. Evowhey juga diformulasikan untuk membantu untuk mencukupi kebutuhan protein harian, mengencangkan otot perut, mempermudah program defisit kalori, dan juga menjalani program cutting.', 'evowheyvanilla.png'),
-(8, 'Optimum Nutrition GS PRE-WORKOUT Fruit Punch 300gr', 550000, 'purple', 'Pre-Workout', 'Untuk Performa, Tenaga dan Fokus GOLD STANDARD PRE-WORKOUT Menggabungkan kafein dari sumber alami dengan creatine monohydrate dan beta-alanine untuk membantu Anda melepaskan energi, fokus, kinerja, dan daya tahan. Dapatkan energi Anda dengan pra-latihan dari salah satu merek paling tepercaya dalam nutrisi olahraga ini.', 'optimumprewo.jpg'),
+(8, 'Optimum Nutrition GS PRE-WORKOUT Fruit Punch 300gr', 550000, 'purple', 'Pre-Workout', 'Untuk Performa, Tenaga dan Fokus GOLD STANDARD PRE-WORKOUT Menggabungkan kafein dari sumber alami dengan creatine monohydrate dan beta-alanine untuk membantu Anda melepaskan energi, fokus, kinerja, dan daya tahan. Dapatkan energi Anda dengan pra-latihan dari salah satu merek paling tepercaya dalam nutrisi olahraga ini.', 'optimumprework.jpg'),
 (9, 'Evolene Crevolene Anggur 330gr ', 200000, 'yellow', 'Creatine', 'Evolene Crevolene merupakan suplemen susu olahraga yang rutin dikonsumsi bila Anda sedang berencana mambangun massa otot, sebab susu ini menghasilkan energi dan tenaga ekstra yang berguna untuk olahraga dengan intensitas berat dan repetisi tinggi. Susu Evolene Crevolene memiliki rasa anggur dengan komposisi Creatine yang bermanfaat massa otot lebih tebal dan cepat terbentuk.', 'crevoleneanggur.jpg'),
 (10, 'Rimbalife RIMBAMASS 900gr Special Choco Delight', 225000, 'pink', 'Gainer', 'RimbaLife Rimba Mass merupakan susu suplemen fitness dengan kandungan protein yang tinggi dan rendah lemak, cocok bagi Anda yang sedang ingin menambah berat badan dan membentuk otot menjadi lebih tebal. Susu ini memiliki komposisi 34 gram protein, 90 gram total karbohidrat, 522 kalori, dan BCAA 3,7 gram yang memiliki peran penting untuk menambah energi dan mengembangkan kinerja massa otot.', 'rimbalifegainer.jpg'),
 (11, 'Muscle First Pro Whey 900gr Strawberry', 420000, 'pink', 'Whey Protein', 'Pro Whey merupakan susu protein untuk pemula gym yang ingin menurunkan berat badan dan recovery massa otot. Pro Whey juga terbuat alami dari protein susu whey terbaik, serta pemanis alami dari daun stevia.', 'm1wheystroberi.jpg'),
@@ -162,7 +162,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
-(1, 'admin1', 'abc@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'admin'),
+(1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
 (4, 'haikal', 'haikal@gmail.com', 'a847b53f9999fc735ca2b6f1419c93d0', 'customer'),
 (5, 'customer1', 'def@gmail.com', '4ed9407630eb1000c0f6b63842defa7d', 'customer');
 
