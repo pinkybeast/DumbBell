@@ -1,5 +1,6 @@
 <?php
     include_once('./config/config.php');
+    include_once('./header.php');
 
     $customer_id = $_SESSION['customer_id'];
 
@@ -88,7 +89,7 @@
         <?php
             }
             }else{
-                echo '<p class="empty">Your cart is empty</p>';
+                echo '<p class="empty">Terimakasih sudah berbelanja!</p>';
             }
         ?>
             <div class="grand-total">Total : <span>Rp <?php echo number_format($grand_total, 0, ',', '.'); ?>,-</span></div>
