@@ -32,7 +32,7 @@
 
 *::-webkit-scrollbar{
     height: 0.5rem;
-    width: 1rem;
+    width: 0.3rem;
 }
 
 *::-webkit-scrollbar-track{
@@ -257,23 +257,25 @@ section{
 /* STYLING ADMIN DASHBOARD & ADMIN HOME PAGE BELOW */
 
 .dashboard .box-container {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .dashboard .box-container .box {
     padding: 2rem;
     margin-top: 2rem;
-    
+    flex-grow: 1;
     border-radius: 0.8rem;
     background-color: white;
     box-shadow: var(--box-shadow);
     border: var(--border);
-
     text-align: center;
 }
 
@@ -457,9 +459,7 @@ section{
     width: 80%;
     height: 80%;
     margin-bottom: 0.5rem;
-
-    border: 0.4rem solid var(--black);
-    /*border-radius: 0.5rem;*/
+    border: 0.2rem solid var(--black);
 }    
 
 .update-product form .box{
@@ -503,7 +503,7 @@ section{
 
 .placed-orders .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 29rem);
+   grid-template-columns: repeat(auto-fit, 35rem);
    gap: 4rem;
    align-items: flex-start;
    max-width: 1200px;

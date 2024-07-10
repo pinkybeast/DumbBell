@@ -11,8 +11,7 @@
     if(isset($_POST['add_product'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $price = $_POST['price'];
-        $color = mysqli_real_escape_string($conn, $_POST['color']);
-        $category = $_POST['category'];
+        $category =  $_POST['category'];
         $details = mysqli_real_escape_string($conn, $_POST['details']);
         $image = $_FILES['image']['name'];
         $image_size = $_FILES['image']['size'];
@@ -25,21 +24,20 @@
             $message[] = 'Product name already exists!';
         }*/
         
-        $sql_add_product = mysqli_query($conn, "INSERT INTO products(name, price, color, category, details, image) VALUES('$name', '$price', '$color', '$category', '$details', '$image')") or die('Query Failed');
+        $sql_add_product = mysqli_query($conn, "INSERT INTO products(name, price, color, category, details, image) VALUES('$name', '$price', 'null', '$category', '$details', '$image')") or die('Query Failed');
             
-        if($sql_add_product){
-
+        if(!$sql_add_product){
+            $message[] = 'Product addition failed!';
+        }
+        else{
             if($image_size > 20000000){
                 $message[] = 'Image size is too large.';
             }
             else{
                 move_uploaded_file($image_tmp_name, $image_folder);
-                $message[] = 'Product added successfully!';
+                // header('location:admin_products.php');
             }
-        }
-        else{
-            $message[] = 'Product addition failed!';
-
+            $message[] = 'Product added successfully!';
         }
     }
 
@@ -88,9 +86,10 @@
             <h3>Add New Products</h3>
             <input type="text" name="name" class="box" placeholder="Enter product name" required >
             <input type="text" min="0" name="price" class="box" placeholder="Enter product price" required >
-            <input type="text" name="color" class="box" placeholder="Enter product color" required >
+            <!-- <input type="text" name="color" class="box" placeholder="Enter product color" required > -->
             <p>Select product category</p>
             <select name="category" class="box">
+                <option value="" disabled selected></option>
                 <option value="Gainer">Gainer</option>
                 <option value="Whey Protein">Whey Protein</option>
                 <option value="Creatine">Creatine</option>

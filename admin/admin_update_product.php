@@ -12,11 +12,10 @@
         $update_p_id = $_POST['update_p_id'];
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $price = $_POST['price'];
-        $color = mysqli_real_escape_string($conn, $_POST['color']);
         $category = $_POST['update_category'];
         $details = mysqli_real_escape_string($conn, $_POST['details']);
         
-        mysqli_query($conn, "UPDATE products SET name ='$name', price ='$price', color = '$color', category ='$category', details ='$details' WHERE id = '$update_p_id'");
+        mysqli_query($conn, "UPDATE products SET name ='$name', price ='$price', color = 'null', category ='$category', details ='$details' WHERE id = '$update_p_id'");
 
         $image = $_FILES['image']['name'];
         $image_size = $_FILES['image']['size'];
@@ -79,16 +78,13 @@
             <input type="hidden" value="<?php echo $fetch_product['image'] ?>" name="update_p_image">
             <input type="text" name="name" class="box" value="<?php echo $fetch_product['name'] ?>" placeholder="Update product name" required >
             <input type="number" min="0" name="price" class="box" value="<?php echo $fetch_product['price'] ?>" placeholder="Update product price" required >
-            <input type="text" name="color" class="box" value="<?php echo $fetch_product['color'] ?>" placeholder="Update product color" required >
-            <p>Select new product category:</p>
+            <p>Select product category:</p>
             <select name="update_category" class="box" >
-                    <option disabled selected><?php echo $fetch_product['category'] ?></option>
-                    <option value="cutting">Cutting</option>
-                    <option value="bulking">Bulking</option>
-                    <option value="bracelet">Bracelet</option>
-                    <option value="ring">Ring</option>
-                    <option value="anklet">Anklet</option>
-                    <option value="other">Other</option>
+                    <option value="<?php echo $fetch_product['category'] ?>" selected placeholder="<?php echo $category ?>"></option>
+                    <option value="Gainer">Gainer</option>
+                    <option value="Whey Protein">Whey Protein</option>
+                    <option value="Creatine">Creatine</option>
+                    <option value="Pre-Workout">Pre-Workout</option>
             </select>
             <textarea name="details" cols="30" rows="10" class="box" placeholder="Update products details" required><?php echo $fetch_product['details'] ?></textarea>
             <p>Select new image file:</p>
