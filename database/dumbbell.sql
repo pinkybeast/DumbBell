@@ -44,9 +44,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `customer_id`, `pid`, `name`, `price`, `color`, `category`, `quantity`, `image`) VALUES
-(45, 4, 3, 'L-Men Platinum Strawberry 800g', 400000, 'multi-color', 'Whey Protein', 3, 'lmenstrawberry.jpg'),
-(46, 4, 13, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'multi-color', 'Whey Protein', 1, 'optimumwhey.jpg'),
-(47, 4, 20, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'multi-color', 'Pre-Workout', 1, 'fitlifeprewo.jpg');
+(2, 4, 3, 'L-Men Platinum Strawberry 800g', 400000, 'multi-color', 'Whey Protein', 3, 'lmenstrawberry.jpg'),
+(3, 4, 17, 'KEVIN LEVRONE GOLD CREATINE MONOHYDRATE 300gr - Unflavoured', 335000, 'purple', 'Creatine', 1, 'kevinlevrone.jpg'),
+(4, 4, 6, 'Muscle First Pro Gainer Honeydew Melon 900gr', 250000, 'multi-color', 'Gainer', 1, 'm1gainermelon.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,7 @@ CREATE TABLE `messages` (
   `customer_id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `number` varchar(12) NOT NULL,
+  `number` varchar(14) NOT NULL,
   `message` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -80,7 +80,7 @@ CREATE TABLE `orders` (
   `id` int(100) NOT NULL,
   `customer_id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `number` varchar(12) NOT NULL,
+  `number` varchar(14) NOT NULL,
   `email` varchar(100) NOT NULL,
   `method` varchar(100) NOT NULL,
   `address` varchar(500) NOT NULL,
@@ -188,9 +188,9 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `customer_id`, `pid`, `name`, `price`, `color`, `category`, `image`) VALUES
-(15, 4, 13, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'multi-color', 'Whey Protein', 'optimumwhey.jpg'),
-(16, 4, 20, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'multi-color', 'Pre-Workout', 'fitlifeprewo.jpg'),
-(7, 4, 28, 'EvoWhey Evolene Whey Protein 1750gr 50 Sachet Vanilla', 720000, 'red', 'Whey Protein', 'evowheyvanilla.png');
+(2, 4, 15, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'multi-color', 'Whey Protein', 'optimumwhey.jpg'),
+(3, 4, 16, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'multi-color', 'Pre-Workout', 'fitlifeprewo.jpg'),
+(4, 4, 7, 'EvoWhey Evolene Whey Protein 1750gr 50 Sachet Vanilla', 720000, 'red', 'Whey Protein', 'evowheyvanilla.png');
 
 --
 -- Indexes for dumped tables
