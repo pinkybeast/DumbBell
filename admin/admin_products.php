@@ -52,6 +52,7 @@
         mysqli_query($conn, "DELETE FROM wishlist WHERE pid = '$delete_id'") or die('Query Failed');
         mysqli_query($conn, "DELETE FROM cart WHERE pid = '$delete_id'") or die('Query Failed');
         header('location:admin_products.php');
+        $message[] = 'Product deleted successfully!';
     }
    
 ?>
@@ -113,11 +114,13 @@
                     while($fetch_products = mysqli_fetch_assoc($sql_select_products)){
             ?>
             <div class="box">
-                <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
-                <img src="../uploaded_images/<?php echo $fetch_products['image']; ?>" alt="" class="product-image" >
-                <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="category"><?php echo $fetch_products['category']; ?></div>
-                <div class="details"><?php echo $fetch_products['details']; ?></div>
+                <div class="content">
+                    <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
+                    <img src="../uploaded_images/<?php echo $fetch_products['image']; ?>" alt="" class="product-image" >
+                    <div class="name"><?php echo $fetch_products['name']; ?></div>
+                    <div class="category"><?php echo $fetch_products['category']; ?></div>
+                    <div class="details"><?php echo $fetch_products['details']; ?></div>
+                </div>
                 <a href="admin_update_product.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Update</a>
                 <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
             </div>

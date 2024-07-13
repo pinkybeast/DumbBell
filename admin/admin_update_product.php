@@ -79,8 +79,8 @@
             <input type="text" name="name" class="box" value="<?php echo $fetch_product['name'] ?>" placeholder="Update product name" required >
             <input type="number" min="0" name="price" class="box" value="<?php echo $fetch_product['price'] ?>" placeholder="Update product price" required >
             <p>Select product category:</p>
-            <select name="update_category" class="box" >
-                    <option value="<?php echo $fetch_product['category'] ?>" selected placeholder="<?php echo $category ?>"></option>
+            <select name="update_category" class="box">
+                    <option value="<?php echo $fetch_product['category'] ?>"selected><?php echo $fetch_product['category'] ?></option>
                     <option value="Gainer">Gainer</option>
                     <option value="Whey Protein">Whey Protein</option>
                     <option value="Creatine">Creatine</option>
