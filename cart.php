@@ -75,7 +75,12 @@
                     <div class="category"><?php echo $fetch_cart['category']; ?></div>
                     <form action="" method="post">
                         <input type="hidden" value="<?php echo $fetch_cart['id']; ?>" name="cart_id">
-                        <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="qty">
+                        <select name="cart_quantity" class="qty" id="">
+                            <option value="<?php echo $fetch_cart['quantity']; ?>" selected disabled><?php echo $fetch_cart['quantity']; ?></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
                         <input type="submit" value="update" class="option-btn" name="update_quantity">
                     </form>
                     <div class="sub-total"> sub-total : <span>Rp <?php $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); echo number_format($sub_total, 0, ',', '.') ?>,-</span></div>

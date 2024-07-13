@@ -106,7 +106,11 @@
                 <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
                 <div class="category"><?php echo $fetch_products['category']; ?></div>
                 <div class="details"><?php echo $fetch_products['details']; ?></div>
-                <input type="number" min="0" max="100" value="1" name="product_quantity" class="qty">
+                <select name="product_quantity" class="qty" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>" >
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>" >
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>" >

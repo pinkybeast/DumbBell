@@ -41,7 +41,11 @@
                     <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
                     <div class="name"><?php echo $fetch_products['name']; ?></div>
                     <div class="category"><?php echo $fetch_products['category']; ?></div>
-                    <input type="number" min="0" max="100" value="1" name="product_quantity" class="qty">
+                    <select name="product_quantity" class="qty" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                     <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>" >
                     <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>" >
                     <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>" >
