@@ -10,13 +10,8 @@
 
     if(isset($_GET['delete'])){
         $delete_id = $_GET['delete'];
-        $sql_select_delete_image = mysqli_query($conn, "SELECT image FROM messages WHERE id = '$delete_id'") or die('Query Failed');
-        $fetch_delete_image = mysqli_fetch_assoc($sql_select_delete_image);
-
-        unlink('../received_images/'.$fetch_delete_image['image']); 
 
         mysqli_query($conn, "DELETE FROM messages WHERE id = '$delete_id'; ") or die('Query failed');
-
         header('location:admin_contact.php');
     }
 ?>
@@ -64,21 +59,14 @@
                     <p>Message: <span><?php echo $fetch_message['message']; ?></span></p>
                     <a href="admin_contact.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('Delete this message?');" class="delete-btn">Delete</a>
                 </div>
-
                 <?php
                     }
                 }
                 else{
-                    $message[] = 'You have 0 custom orders or messages.';
+                    echo '<p class="empty">No messages yet!</p>';
                 }
-
                 ?>
-
-            
-
-                
             </div>
-
         </section>
 
     <!-- custom js file link -->
