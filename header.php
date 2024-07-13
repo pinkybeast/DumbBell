@@ -33,44 +33,35 @@
                 <li><a href="orders.php">Orders</a></li>
                 <li><a href="custom.php">Message</a></li>
                 <li><a href="about.php">About</a></li>
-                <?php
-                    if(!isset($customer_id)){
-                ?>
+                <?php if(!isset($customer_id)){ ?>
                 <li><a href="#">Account <i class="fa-solid fa-caret-down"></i></a>
                     <ul>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="register.php">Register</a></li>
                     </ul>
                 </li>
-                <?php
-                    }
-                ?>
+                <?php } ?>
             </ul>
         </nav>
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
-        </div>  
+        </div>
         <div class="icons">
             <div id="customer-btn" class="fas fa-user"></div>
-            <a href="wishlist.php"><i class="fa fa-heart"></i><span>(<?php 
-            if(isset($customer_id)) echo $wishlist_num_rows; else echo '0'; ?>)</span></a>
-            <a href="cart.php"><i class="fa fa-shopping-cart"></i><span>(<?php 
-            if(isset($customer_id)) echo $cart_num_rows; else echo '0'; ?>)</span></a>
+            <a href="wishlist.php"><i class="fa fa-heart"></i><span>(<?php if(isset($customer_id)) echo $wishlist_num_rows; else echo '0'; ?>)</span></a>
+            <a href="cart.php"><i class="fa fa-shopping-cart"></i><span>(<?php if(isset($customer_id)) echo $cart_num_rows; else echo '0'; ?>)</span></a>
         </div>
     </div>
-
-    <?php
-            if(isset($customer_id)){
-                echo '<div class="account-box">
-                    <p>username: <span>'.$_SESSION['customer_name'].'</span></p>
-                    <p>email: <span>'.$_SESSION['customer_email'].'</span></p>
-                    <a href="./logout.php" class="delete-btn">logout</a>
-                </div>';
-            } else {
-                echo '<div class="account-box">
-                        <p>username: <span>Guest</span></p>
-                        <p>email: <span>Guest</span></p>
-                    </div>';
-            }
-        ?>
+    <?php if(isset($customer_id)){ ?>
+    <div class="account-box">
+        <p>username: <span><?php echo $_SESSION['customer_name']; ?></span></p>
+        <p>email: <span><?php echo $_SESSION['customer_email']; ?></span></p>
+        <a href="./logout.php" class="delete-btn">logout</a>
+    </div>
+    <?php } else { ?>
+    <div class="account-box">
+        <p>username: <span>Guest</span></p>
+        <p>email: <span>Guest</span></p>
+    </div>
+    <?php } ?>
 </header>
