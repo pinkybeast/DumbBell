@@ -164,7 +164,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 (1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
 (4, 'haikal', 'haikal@gmail.com', 'a847b53f9999fc735ca2b6f1419c93d0', 'customer'),
-(5, 'customer1', 'def@gmail.com', '4ed9407630eb1000c0f6b63842defa7d', 'customer');
+(5, 'marcell', 'marcell@gmail.com', 'a6e9b7e25157b88e4c57faa83c3b9742', 'customer');
 
 -- --------------------------------------------------------
 
