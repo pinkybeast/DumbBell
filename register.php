@@ -57,7 +57,6 @@
     ?>
 
         <div class="form-container">
-
             <form action="" method="post">
                 <h3>register now</h3>
                 <input type="text" name="name" placeholder="Enter your name" required class="box">

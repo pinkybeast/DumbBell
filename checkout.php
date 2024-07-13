@@ -43,9 +43,9 @@
         else{
             mysqli_query($conn, "INSERT INTO orders(customer_id, name, number, email, method, address, total_products, total_price, placed_on_date) VALUES('$customer_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on');") or die('Query failed');
             mysqli_query($conn, "DELETE FROM cart WHERE customer_id = '$customer_id'") or die('query failed');
-            $message[] = 'Order placed successfully!';
         }
         
+        $message[] = 'Order placed successfully!';
 
     }  
 
@@ -97,24 +97,24 @@
 
         <section class="checkout">
 
-            <form action="" method="POST">
+            <form action="" method="POST" name="order">
 
-                <h3>bukti pembayaran menggunakan Gopay, DANA  bisa ke nomor 082299043443
-                    <br> Untuk transfer bank bisa ke nomer rekening : 56810383
+                <h3>Pembayaran menggunakan GoPay, DANA  bisa ke nomor 082299043443
+                    <br> Untuk pembayaran bank hanya bisa via Bank BCA ke nomer rekening <br> 56810383 a/n Muhammad Haikal Halim
                     <br>BUKTI PEMBAYARAN HARAP DI KIRIM KE EMAIL dumbbell@gmail.com</h3>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>Your Name :</span>
-                        <input type="text" name="name" placeholder="enter your name">
+                        <input type="text" name="name" placeholder="enter your name" required>
                     </div>
                     <div class="inputBox">
                         <span>Your Number :</span>
-                        <input type="number" name="number" min="0" placeholder="enter your number">
+                        <input type="text" name="number" min="0" placeholder="enter your number" required>
                     </div>
                     <div class="inputBox">
                         <span>Your Email :</span>
-                        <input type="email" name="email" placeholder="enter your email">
+                        <input type="email" name="email" placeholder="enter your email" required>
                     </div>
                     <div class="inputBox">
                         <span>Payment Method :</span>
@@ -122,39 +122,48 @@
                             <option value="cash on delivery">Cash on Delivery</option>
                             <option value="credit card">GoPay</option>
                             <option value="paypal">DANA</option>
-                            <option value="paytm">Transfer Bank</option>
+                            <option value="paytm">Bank BCA</option>
                         </select>
                     </div>
                     <div class="inputBox">
-                        <span>Address line 01 :</span>
-                        <input type="text" name="house" placeholder="e.g. house no.">
+                        <span>Address line 1 :</span>
+                        <input type="text" name="house" placeholder="e.g. house no." required>
                     </div>
                     <div class="inputBox">
-                        <span>Address line 02 :</span>
+                        <span>Address line 2 :</span>
                         <input type="text" name="street" placeholder="e.g. street name">
                     </div>
                     <div class="inputBox">
                         <span>City :</span>
-                        <input type="text" name="city" placeholder="e.g. Islamabad">
+                        <input type="text" name="city" placeholder="e.g. Bekasi" required>
                     </div>
                     <div class="inputBox">
-                        <span>Province/ State :</span>
-                        <input type="text" name="state" placeholder="e.g. Federal Capital">
+                        <span>Province/State :</span>
+                        <input type="text" name="state" placeholder="e.g. Jawa Barat" required>
                     </div>
                     <div class="inputBox">
                         <span>Country :</span>
-                        <input type="text" name="country" placeholder="e.g. Pakistan">
+                        <input type="text" name="country" placeholder="e.g. Indonesia" required>
                     </div>
                     <div class="inputBox">
-                        <span>Pin Code :</span>
-                        <input type="number" min="0" name="pin_code" placeholder="e.g. 123456">
+                        <span>Zip Code :</span>
+                        <input type="text" min="0" name="pin_code" placeholder="e.g. 13860" required>
                     </div>
                 </div>
-
                 <input type="submit" name="order" value="order now" class="btn">
             </form>
+            <?php
+                if(isset($_POST['order'])){
+            ?>
+                <div class="message">
+                    <span>Order placed successfully!</span>
+                    <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                </div>
+            <?php
+                }
+            ?>
 
-    </section>
+        </section>
 
 
     <?php 

@@ -16,8 +16,8 @@
         $product_category = $_POST['product_category'];
         $product_image = $_POST['product_image'];
         
-        $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
-        $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+        $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
+        $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
         if(mysqli_num_rows($sql_check_wishlist_num) > 0){
             $message[] = 'Product already added to wishlist';
@@ -112,11 +112,13 @@
                             while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  
                 ?>
                 <form action="" method="POST" class="box">
-                    <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
-                    <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
-                    <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
-                    <div class="name"><?php echo $fetch_products['name']; ?></div>
-                    <div class="category"><?php echo $fetch_products['category']; ?></div>
+                    <div class="content">
+                        <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
+                        <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
+                        <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
+                        <div class="name"><?php echo $fetch_products['name']; ?></div>
+                        <div class="category"><?php echo $fetch_products['category']; ?></div>
+                    </div>
                     <select name="product_quantity" class="qty" id="">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -128,13 +130,8 @@
                     <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>" >
                     <input type="hidden" name="product_color" value="<?php echo $fetch_products['color']; ?>" >
                     <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>" >
-                    <?php if(isset($_SESSION['customer_id'])): ?>
-                        <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
-                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
-                    <?php else: ?>
-                        <a href="login.php" class="option-btn">add to wishlist</a>
-                        <a href="login.php" class="btn">add to cart</a>
-                    <?php endif; ?>
+                    <input type="submit" value="add to wishlist" name="add_to_wishlist" class="option-btn">
+                    <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                 </form>
                 <?php
                     }
@@ -144,6 +141,26 @@
                         }
                     }else{
                         echo '<p class="empty">Search something!</p>';
+                    }
+                ?>
+                <?php
+                    if(isset($_POST['add_to_cart'])){
+                ?>
+                    <div class="message">
+                        <span>Product added to cart!</span>
+                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                    </div>
+                <?php
+                    }
+                ?>
+                <?php
+                    if(isset($_POST['add_to_wishlist'])){
+                ?>
+                    <div class="message">
+                        <span>Product added to wishlist!</span>
+                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                    </div>
+                <?php
                     }
                 ?>
             </div>

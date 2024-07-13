@@ -39,13 +39,15 @@
 
             <h1 class="title">placed orders</h1>
 
+            <h3>Jika tidak mengirim bukti pembayaran ketika sudah checkout selama 3 hari <br> order akan di hapus atau tidak di proses</h3>
+
             <div class="box-container">
 
-            <?php
-                $sql_select_orders = mysqli_query($conn, "SELECT * FROM orders WHERE customer_id = '$customer_id'") or die('query failed');
-                if(mysqli_num_rows($sql_select_orders) > 0){
-                    while($fetch_orders = mysqli_fetch_assoc($sql_select_orders)){
-            ?>
+                <?php
+                    $sql_select_orders = mysqli_query($conn, "SELECT * FROM orders WHERE customer_id = '$customer_id'") or die('query failed');
+                    if(mysqli_num_rows($sql_select_orders) > 0){
+                        while($fetch_orders = mysqli_fetch_assoc($sql_select_orders)){
+                ?>
             <div class="box">
                 <p> placed on : <span><?php echo $fetch_orders['placed_on_date']; ?></span> </p>
                 <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>

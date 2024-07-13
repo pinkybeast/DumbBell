@@ -1,6 +1,6 @@
 <?php
-    include_once('./config/config.php');
     session_start();
+    include_once('./config/config.php');
 
     if(isset($_POST['submit'])){
         
@@ -58,7 +58,6 @@
     ?>
 
         <div class="form-container">
-
             <form action="" method="post">
                 <h3>login now</h3>
                 <input type="email" name="email" placeholder="Enter your email address" required class="box">

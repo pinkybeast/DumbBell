@@ -65,12 +65,21 @@
                 <h3>Feel Free To Type Anything!</h3>
                 <input type="text" name="name" placeholder="enter your name" class="box" required> 
                 <input type="email" name="email" placeholder="enter your email" class="box" required>
-                <input type="number" name="number" placeholder="enter your number" class="box" required>
+                <input type="text" name="number" placeholder="enter your number" class="box" required>
                 <textarea name="message" class="box" placeholder="enter your message" required cols="30" rows="10"></textarea>
                 <br><br>
                 <input type="submit" value="send message" name="send" class="btn">
             </form>
-
+            <?php
+                if(isset($_POST['send'])){
+            ?>
+                <div class="message">
+                    <span>Message sent successfully!</span>
+                    <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                </div>
+            <?php
+                }
+            ?>
         </section>
 
 

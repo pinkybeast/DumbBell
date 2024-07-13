@@ -163,11 +163,13 @@
                         while($fetch_products = mysqli_fetch_assoc($sql_select_products)){  
                 ?>
                     <form action="" method="POST" class="box">
-                        <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
-                        <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
-                        <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
-                        <div class="name"><?php echo $fetch_products['name']; ?></div>
-                        <div class="category"><?php echo $fetch_products['category']; ?></div>
+                        <div class="content">
+                            <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
+                            <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
+                            <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
+                            <div class="name"><?php echo $fetch_products['name']; ?></div>
+                            <div class="category"><?php echo $fetch_products['category']; ?></div>
+                        </div>
                         <select name="product_quantity" class="qty" id="">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -189,6 +191,26 @@
                         echo '<p class="empty">No products added yet!</p>';
                     }
                 }
+                ?>
+                <?php
+                    if(isset($_POST['add_to_cart'])){
+                ?>
+                    <div class="message">
+                        <span>Product added to cart!</span>
+                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                    </div>
+                <?php
+                    }
+                ?>
+                <?php
+                    if(isset($_POST['add_to_wishlist'])){
+                ?>
+                    <div class="message">
+                        <span>Product added to wishlist!</span>
+                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+                    </div>
+                <?php
+                    }
                 ?>
             </div>
         </section>
