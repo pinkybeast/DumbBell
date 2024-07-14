@@ -44,11 +44,16 @@
             mysqli_query($conn, "INSERT INTO orders(customer_id, name, number, email, method, address, total_products, total_price, placed_on_date) VALUES('$customer_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on');") or die('Query failed');
             mysqli_query($conn, "DELETE FROM cart WHERE customer_id = '$customer_id'") or die('query failed');
         }
-        
         $message[] = 'Order placed successfully!';
-
     }  
-
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -152,19 +157,7 @@
                 </div>
                 <input type="submit" name="order" value="order now" class="btn">
             </form>
-            <?php
-                if(isset($_POST['order'])){
-            ?>
-                <div class="message">
-                    <span>Order placed successfully!</span>
-                    <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                </div>
-            <?php
-                }
-            ?>
-
         </section>
-
 
     <?php 
         include_once('./footer.php');

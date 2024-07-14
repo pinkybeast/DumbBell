@@ -13,12 +13,11 @@
       $product_id = $_POST['product_id'];
       $product_name = $_POST['product_name'];
       $product_price = $_POST['product_price'];
-      $product_color = $_POST['product_color'];
       $product_category = $_POST['product_category'];
       $product_image = $_POST['product_image'];
       
-      $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
-      $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+      $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
+      $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
       if(mysqli_num_rows($sql_check_wishlist_num) > 0){
           $message[] = 'Product already added to wishlist';
@@ -27,42 +26,50 @@
           $message[] = 'Product already added to cart';
       }
       else{
-          mysqli_query($conn, "INSERT INTO wishlist(customer_id, pid, name, price, color, category, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_image')") or die('Query Failed');
+          mysqli_query($conn, "INSERT INTO wishlist(customer_id, pid, name, price, category, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price',  '$product_category', '$product_image')") or die('Query Failed');
           $message[] = 'Added product to wishlist';
       }
-  }
+    }
 
-  if(isset($_POST['add_to_cart'])){
-      if (!isset($_SESSION['customer_id'])) {
-          header('Location: login.php');
-          exit();
-      }
+    if(isset($_POST['add_to_cart'])){
+        if (!isset($_SESSION['customer_id'])) {
+            header('Location: login.php');
+            exit();
+        }
 
-      $customer_id = $_SESSION['customer_id'];
-      $product_id = $_POST['product_id'];
-      $product_name = $_POST['product_name'];
-      $product_price = $_POST['product_price'];
-      $product_color = $_POST['product_color'];
-      $product_category = $_POST['product_category'];
-      $product_quantity = $_POST['product_quantity'];
-      $product_image = $_POST['product_image'];
-      
-      $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+        $customer_id = $_SESSION['customer_id'];
+        $product_id = $_POST['product_id'];
+        $product_name = $_POST['product_name'];
+        $product_price = $_POST['product_price'];
+        $product_category = $_POST['product_category'];
+        $product_quantity = $_POST['product_quantity'];
+        $product_image = $_POST['product_image'];
+        
+        $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
-      if(mysqli_num_rows($sql_check_cart_num) > 0){
-          $message[] = 'Product already added to cart';
-      }
-      else{
+        if(mysqli_num_rows($sql_check_cart_num) > 0){
+            $message[] = 'Product already added to cart';
+        }
+        else{
 
-          $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+            $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
-          if(mysqli_num_rows($sql_check_wishlist_num) > 0){
-              mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
-          }
-          mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
-          $message[] = 'Added product to cart';
-      }
-  }
+            if(mysqli_num_rows($sql_check_wishlist_num) > 0){
+                mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
+            }
+            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price',  '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
+            $message[] = 'Added product to cart';
+        }
+    }
+
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +97,6 @@
             <div class="content">
                 <h3>DumbBell Website</h3>
                 <p>
-                DumbBell adalah platform e-commerce user friendly yang dirancang khusus untuk melayani individu yang baru dalam angkat beban atau baru memulai perjalanan gym mereka.
                 Website ini menyediakan pilihan suplemen yang dirancang khusus untuk pemula, yang bertujuan untuk mendukung target mereka dan memaksimalkan pengalaman berolahraga.
                 </p>
                 <a href="about.php" class="btn">More About Us</a>
@@ -98,10 +104,14 @@
         </section>
 
         <section class="category">
+            <div class="title">
+                <h3>Jenis-jenis Program Membentuk Badan</h3>
+            </div>
             <div class="flex">
                 <div class="image">
                     <img src="./images/bulking1.jpg" alt="">
                 </div>
+
 
                 <div class="content">
                     <h3>Bulking</h3>
@@ -143,11 +153,12 @@
                         <img src="./uploaded_images/<?php echo $fetch_products['image'] ?>" alt="" class="product-image">
                         <div class="name"><?php echo $fetch_products['name']; ?></div>
                         <div class="category"><?php echo $fetch_products['category']; ?></div>
+                        <div class="stock">Stock: <?php echo $fetch_products['stock']; ?></div>
                         <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>" >
                         <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>" >
                         <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>" >
                         <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>" >
-                        <input type="hidden" name="product_color" value="<?php echo $fetch_products['color']; ?>" >
+                        <input type="hidden" name="product_stock" value="<?php echo $fetch_products['stock']; ?>" >
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>" >
                     </div>
                     <select name="product_quantity" class="qty" id="">
@@ -165,28 +176,7 @@
                         echo '<p class="empty">No products added yet!</p>';
                     }
                 ?>
-                <?php
-                    if(isset($_POST['add_to_cart'])){
-                ?>
-                    <div class="message">
-                        <span>Product added to cart!</span>
-                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                    </div>
-                <?php
-                    }
-                ?>
-                <?php
-                    if(isset($_POST['add_to_wishlist'])){
-                ?>
-                    <div class="message">
-                        <span>Product added to wishlist!</span>
-                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                    </div>
-                <?php
-                    }
-                ?>
             </div>
-
             <div class="more-btn">
                 <a href="shop.php" class="option-btn">load more</a>
             </div>

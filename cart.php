@@ -26,6 +26,14 @@
         $message[] = 'Cart quantity updated!';
     }
 
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -85,16 +93,6 @@
                     </form>
                     <div class="sub-total"> sub-total : <span>Rp <?php $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); echo number_format($sub_total, 0, ',', '.') ?>,-</span></div>
                 </div>
-                <?php
-                    if(isset($_POST['update_quantity'])){
-                ?>
-                    <div class="message">
-                        <span>Cart quantity updated!</span>
-                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                    </div>
-                <?php
-                    }
-                ?>
             <?php
             $grand_total += $sub_total;
                 }

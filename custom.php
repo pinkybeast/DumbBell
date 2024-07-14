@@ -32,6 +32,14 @@
         }
     }
 
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -70,20 +78,9 @@
                 <br><br>
                 <input type="submit" value="send message" name="send" class="btn">
             </form>
-            <?php
-                if(isset($_POST['send'])){
-            ?>
-                <div class="message">
-                    <span>Message sent successfully!</span>
-                    <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                </div>
-            <?php
-                }
-            ?>
         </section>
 
-
-    <?php 
+<?php 
         include_once('./footer.php');
     ?>
 

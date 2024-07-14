@@ -12,25 +12,33 @@
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
-        $product_color = $_POST['product_color'];
         $product_category = $_POST['product_category'];
         $product_quantity = 1;
         $product_image = $_POST['product_image'];
         
-        $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+        $sql_check_cart_num = mysqli_query($conn, "SELECT * FROM cart WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
         if(mysqli_num_rows($sql_check_cart_num) > 0){
             $message[] = 'Product already added to cart';
         }
         else{
 
-            $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+            $sql_check_wishlist_num = mysqli_query($conn, "SELECT * FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
 
             if(mysqli_num_rows($sql_check_wishlist_num) > 0){
-                mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name' AND color = '$product_color'") or die('Query Failed');
+                mysqli_query($conn, "DELETE FROM wishlist WHERE customer_id = '$customer_id' AND name = '$product_name'") or die('Query Failed');
             }
-            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, color, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_color', '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
+            mysqli_query($conn, "INSERT INTO cart(customer_id, pid, name, price, category, quantity, image) VALUES('$customer_id', '$product_id', '$product_name', '$product_price', '$product_category', '$product_quantity', '$product_image')") or die('Query Failed');
             $message[] = 'Added product to cart successfully!';
+        }
+    }
+    
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<div class="message">
+                <span>'.$message.'</span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>';
         }
     }
     
@@ -92,22 +100,11 @@
                         <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['pid']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">
-                        <input type="hidden" name="product_color" value="<?php echo $fetch_wishlist['color']; ?>">
                         <input type="hidden" name="product_category" value="<?php echo $fetch_wishlist['category']; ?>">
                         <input type="hidden" name="product_image" value="<?php echo $fetch_wishlist['image']; ?>">
                     </div>
                     <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                 </form>
-                <?php
-                    if(isset($_POST['add_to_cart'])){
-                ?>
-                    <div class="message">
-                        <span>Product added to cart!</span>
-                        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                    </div>
-                <?php
-                    }
-                ?>
                 <?php
                     $grand_total += $fetch_wishlist['price'];
                         }

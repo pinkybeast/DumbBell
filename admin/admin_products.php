@@ -11,6 +11,7 @@
     if(isset($_POST['add_product'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $price = $_POST['price'];
+        $stock = $_POST['stock'];
         $category =  $_POST['category'];
         $details = mysqli_real_escape_string($conn, $_POST['details']);
         $image = $_FILES['image']['name'];
@@ -24,7 +25,7 @@
             $message[] = 'Product name already exists!';
         }*/
         
-        $sql_add_product = mysqli_query($conn, "INSERT INTO products(name, price, color, category, details, image) VALUES('$name', '$price', 'null', '$category', '$details', '$image')") or die('Query Failed');
+        $sql_add_product = mysqli_query($conn, "INSERT INTO products(name, price, stock, category, details, image) VALUES('$name', '$price', '$stock', '$category', '$details', '$image')") or die('Query Failed');
             
         if(!$sql_add_product){
             $message[] = 'Product addition failed!';
@@ -87,7 +88,7 @@
             <h3>Add New Products</h3>
             <input type="text" name="name" class="box" placeholder="Enter product name" required >
             <input type="text" min="0" name="price" class="box" placeholder="Enter product price" required >
-            <!-- <input type="text" name="color" class="box" placeholder="Enter product color" required > -->
+            <input type="number" name="stock" class="box" placeholder="Enter product stock" required >
             <p>Select product category</p>
             <select name="category" class="box">
                 <option value="" disabled selected></option>
@@ -118,6 +119,7 @@
                     <div class="price">Rp <?php echo number_format($fetch_products['price'], 0, ',', '.'); ?></div>
                     <img src="../uploaded_images/<?php echo $fetch_products['image']; ?>" alt="" class="product-image" >
                     <div class="name"><?php echo $fetch_products['name']; ?></div>
+                    <div class="stock">Stock: <?php echo $fetch_products['stock']; ?></div>
                     <div class="category"><?php echo $fetch_products['category']; ?></div>
                     <div class="details"><?php echo $fetch_products['details']; ?></div>
                 </div>

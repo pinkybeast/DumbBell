@@ -45,7 +45,7 @@
                 
                 <div class="content">
                     <h3>what DumbBell provide?</h3>
-                    <p>Disini, kami menyediakan berbagai fitur unggulan untuk pengalaman belanja suplemen yang optimal, yaitu <strong> Kategori suplemen yang lengkap bagi pemula </strong>, <strong>Kemudahan Berbelanja</strong>, dan juga <strong> Layanan Pelanggan Responsif </strong></p>
+                    <p>Disini, kami menyediakan berbagai fitur unggulan untuk pengalaman belanja suplemen yang optimal, yaitu <strong> Kategori suplemen yang lengkap bagi pemula </strong>, <strong>Kemudahan Berbelanja</strong>, dan juga <strong> Layanan Pelanggan Responsif.</strong></p>
                     <a href="custom.php" class="btn">contact us</a>
                 </div>
 

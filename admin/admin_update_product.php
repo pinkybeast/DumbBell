@@ -12,10 +12,11 @@
         $update_p_id = $_POST['update_p_id'];
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $price = $_POST['price'];
+        $stock = $_POST['stock'];
         $category = $_POST['update_category'];
         $details = mysqli_real_escape_string($conn, $_POST['details']);
         
-        mysqli_query($conn, "UPDATE products SET name ='$name', price ='$price', color = 'null', category ='$category', details ='$details' WHERE id = '$update_p_id'");
+        mysqli_query($conn, "UPDATE products SET name ='$name', price ='$price', stock = '$stock', category ='$category', details ='$details' WHERE id = '$update_p_id'");
 
         $image = $_FILES['image']['name'];
         $image_size = $_FILES['image']['size'];
@@ -77,7 +78,8 @@
             <input type="hidden" value="<?php echo $fetch_product['id'] ?>" name="update_p_id">
             <input type="hidden" value="<?php echo $fetch_product['image'] ?>" name="update_p_image">
             <input type="text" name="name" class="box" value="<?php echo $fetch_product['name'] ?>" placeholder="Update product name" required >
-            <input type="number" min="0" name="price" class="box" value="<?php echo $fetch_product['price'] ?>" placeholder="Update product price" required >
+            <input type="text" min="0" name="price" class="box" value="<?php echo $fetch_product['price'] ?>" placeholder="Update product price" required >
+            <input type="number" name="stock" class="box" value="<?php echo $fetch_product['stock'] ?>" placeholder="Update product stock" required>
             <p>Select product category:</p>
             <select name="update_category" class="box">
                     <option value="<?php echo $fetch_product['category'] ?>"selected><?php echo $fetch_product['category'] ?></option>
