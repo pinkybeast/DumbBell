@@ -413,8 +413,18 @@ section{
     font-weight: bold;
     color:black;
  }
+ 
+.show-products .box-container .box .stock{ 
+    padding:1rem ;
+    
+    text-transform: uppercase;
+    color: green;
+    font-size: 1.4rem;
+    font-weight: bold;
 
-.show-products .box-container .box .category{
+}
+
+.show-products .box-container .box .category{ 
     display: inline-block;
     padding:1.5rem 1rem;
     

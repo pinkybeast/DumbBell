@@ -635,6 +635,14 @@ section{
     color: var(--black);
 }
 
+.products .box-container .box .stock{
+    margin: 1rem;
+    font-size: 1.6rem;
+    color: green;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .products .box-container .box .category{
     margin: 1rem;
     font-size: 1.6rem;
@@ -770,20 +778,17 @@ section{
     font-weight: bold;
 
     border: var(--border);
-}
 
-.quick-view form .color{
-    display: inline-block;
+}
+.quick-view form .stock{
     padding:1.3rem 1rem;
-    width: 45%;
+    width: 100%;
     margin-top: 0.5rem;
-    
     text-transform: uppercase;
-    color: var(--black);
+    color: green;
     font-size: 1.5rem;
     font-weight: bold;
 
-    border: var(--border);
 }
 
 .quick-view form .details{
@@ -1396,6 +1401,14 @@ section{
     font-weight: bold;
 }
 
+.bulking .box-container .box .stock{
+    margin: 1rem;
+    font-size: 1.6rem;
+    color: green;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .bulking .box-container .box .qty{
     width: 100%;
     padding: 1.2rem 1.4rem;
@@ -1488,6 +1501,14 @@ section{
     margin: 1rem;
     font-size: 1.6rem;
     color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cutting .box-container .box .stock{
+    margin: 1rem;
+    font-size: 1.6rem;
+    color: green;
     text-transform: uppercase;
     font-weight: bold;
 }
