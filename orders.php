@@ -39,7 +39,7 @@
 
             <h1 class="title">placed orders</h1>
 
-            <h3>Jika tidak mengirim bukti pembayaran ketika sudah checkout selama 3 hari <br> order akan di hapus atau tidak di proses</h3>
+            <h3>Batas pengiriman bukti pembayaran 3 hari setelah checkout <br> lebih dari itu maka order akan di hapus</h3>
 
             <div class="box-container">
 
