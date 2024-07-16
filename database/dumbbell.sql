@@ -28,14 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `id` int(100) NOT NULL,
-  `customer_id` int(100) NOT NULL,
-  `pid` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `price` int(100) NOT NULL,
-  `category` varchar(100) NOT NULL,
-  `quantity` int(100) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `id` int(5) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `pid` int(15) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `price` int(30) NOT NULL,
+  `category` varchar(10) NOT NULL,
+  `quantity` int(20) NOT NULL,
+  `image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -54,10 +54,10 @@ INSERT INTO `cart` (`id`, `customer_id`, `pid`, `name`, `price`, `category`, `qu
 --
 
 CREATE TABLE `messages` (
-  `id` int(100) NOT NULL,
-  `customer_id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `id` int(5) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
   `number` varchar(14) NOT NULL,
   `message` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -76,13 +76,13 @@ INSERT INTO `messages` (`id`, `customer_id`, `name`, `email`, `number`, `message
 --
 
 CREATE TABLE `orders` (
-  `id` int(100) NOT NULL,
-  `customer_id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `id` int(5) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `name` varchar(25) NOT NULL,
   `number` varchar(14) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `method` varchar(100) NOT NULL,
-  `address` varchar(500) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `method` varchar(35) NOT NULL,
+  `address` varchar(50) NOT NULL,
   `total_products` varchar(1000) NOT NULL,
   `total_price` int(200) NOT NULL,
   `placed_on_date` varchar(50) NOT NULL,
@@ -103,13 +103,13 @@ INSERT INTO `orders` (`id`, `customer_id`, `name`, `number`, `email`, `method`, 
 --
 
 CREATE TABLE `products` (
-  `id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `id` int(5) NOT NULL,
+  `name` varchar(25) NOT NULL,
   `price` int(100) NOT NULL,
-  `stock` int(100) NOT NULL,
-  `category` varchar(100) NOT NULL,
+  `stock` int(30) NOT NULL,
+  `category` varchar(10) NOT NULL,
   `details` text NOT NULL,
-  `image` varchar(100) NOT NULL
+  `image` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -149,10 +149,10 @@ INSERT INTO `products` (`id`, `name`, `price`, `stock`, `category`, `details`, `
 --
 
 CREATE TABLE `users` (
-  `id` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
+  `id` int(5) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `email` varchar(35) NOT NULL,
+  `password` varchar(10) NOT NULL,
   `user_type` varchar(20) NOT NULL DEFAULT 'customer'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -172,13 +172,13 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 --
 
 CREATE TABLE `wishlist` (
-  `id` int(100) NOT NULL,
-  `customer_id` int(100) NOT NULL,
-  `pid` int(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `price` int(100) NOT NULL,
-  `category` varchar(100) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `id` int(5) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `pid` int(10) NOT NULL,
+  `name` varchar(35) NOT NULL,
+  `price` int(50) NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
