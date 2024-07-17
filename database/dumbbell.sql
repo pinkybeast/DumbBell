@@ -43,9 +43,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `customer_id`, `pid`, `name`, `price`, `category`, `quantity`, `image`) VALUES
-(2, 4, 3, 'L-Men Platinum Strawberry 800g', 400000, 'Whey Protein', 3, 'lmenstrawberry.jpg'),
-(3, 4, 17, 'KEVIN LEVRONE GOLD CREATINE MONOHYDRATE 300gr - Unflavoured', 335000, 'Creatine', 1, 'kevinlevrone.jpg'),
-(4, 4, 6, 'Muscle First Pro Gainer Honeydew Melon 900gr', 250000, 'Gainer', 1, 'm1gainermelon.jpg');
+(2, 2, 3, 'L-Men Platinum Strawberry 800g', 400000, 'Whey Protein', 3, 'lmenstrawberry.jpg'),
+(3, 2, 17, 'KEVIN LEVRONE GOLD CREATINE MONOHYDRATE 300gr - Unflavoured', 335000, 'Creatine', 1, 'kevinlevrone.jpg'),
+(4, 2, 6, 'Muscle First Pro Gainer Honeydew Melon 900gr', 250000, 'Gainer', 1, 'm1gainermelon.jpg');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `customer_id`, `name`, `email`, `number`, `message`) VALUES
-(1, 4, 'haikal', 'haikal@gmail.com', '0987654321', 'Websitenya oke');
+(1, 2, 'haikal', 'haikal@gmail.com', '0987654321', 'Websitenya oke');
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `name`, `number`, `email`, `method`, `address`, `total_products`, `total_price`, `placed_on_date`, `payment_status`) VALUES
-(1, 4, 'haikal', '0987654321', 'haikal@gmail.com', 'cash on delivery', 'bekasi', 'Evolene Evomass Gainer Coklat 912gr (1)', 270000, '05-July-2024', 'completed');
+(1, 2, 'haikal', '0987654321', 'haikal@gmail.com', 'cash on delivery', 'bekasi', 'Evolene Evomass Gainer Coklat 912gr (1)', 270000, '05-July-2024', 'completed');
 
 -- --------------------------------------------------------
 
@@ -162,8 +162,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 (1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
-(4, 'haikal', 'haikal@gmail.com', 'a847b53f9999fc735ca2b6f1419c93d0', 'customer'),
-(5, 'marcell', 'marcell@gmail.com', 'a6e9b7e25157b88e4c57faa83c3b9742', 'customer');
+(2, 'haikal', 'haikal@gmail.com', 'a847b53f9999fc735ca2b6f1419c93d0', 'customer'),
+(3, 'marcell', 'marcell@gmail.com', 'a6e9b7e25157b88e4c57faa83c3b9742', 'customer');
 
 -- --------------------------------------------------------
 
@@ -186,9 +186,9 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `customer_id`, `pid`, `name`, `price`, `category`, `image`) VALUES
-(2, 4, 15, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'Whey Protein', 'optimumwhey.jpg'),
-(3, 4, 16, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'Pre-Workout', 'fitlifeprewo.jpg'),
-(4, 4, 7, 'EvoWhey Evolene Whey Protein 1750gr 50 Sachet Vanilla', 720000, 'Whey Protein', 'evowheyvanilla.png');
+(2, 2, 15, 'Optimum Nutrition Gold Standard Whey Protein 450gr - Double Rich Chocolate', 370000, 'Whey Protein', 'optimumwhey.jpg'),
+(3, 2, 16, 'FITLIFE POWR Mango Pre Workout 35 servings 175 gram', 300000, 'Pre-Workout', 'fitlifeprewo.jpg'),
+(4, 2, 7, 'EvoWhey Evolene Whey Protein 1750gr 50 Sachet Vanilla', 720000, 'Whey Protein', 'evowheyvanilla.png');
 
 --
 -- Indexes for dumped tables
