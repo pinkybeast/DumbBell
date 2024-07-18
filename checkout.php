@@ -124,10 +124,10 @@
                     <div class="inputBox">
                         <span>Payment Method :</span>
                         <select name="method">
-                            <option value="cash on delivery">Cash on Delivery</option>
-                            <option value="credit card">GoPay</option>
-                            <option value="paypal">DANA</option>
-                            <option value="paytm">Bank BCA</option>
+                            <option value="Cash on Delivery">Cash on Delivery</option>
+                            <option value="GoPay">GoPay</option>
+                            <option value="DANA">DANA</option>
+                            <option value="Bank BCA">Bank BCA</option>
                         </select>
                     </div>
                     <div class="inputBox">
