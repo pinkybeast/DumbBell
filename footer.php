@@ -21,14 +21,15 @@
         <div class="box">
             <h3>Contact Info</h3>
             <p><i class="fas fa-phone"></i> +62-822-9904-3443 </p>
-            <p><i class="fas fa-envelope"></i> dumbbell@gmail.com </p>
+            <p><i class="fas fa-envelope"></i> dumbbellaa11@gmail.com </p>
             <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
         </div>
 
         <div class="box">
             <h3>Contact Us</h3>
+            <a href="http://www.linkedin.com/in/mhaikalhalim/" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
             <a href="https://www.instagram.com/mhaikalhalim/" target="_blank"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram </a>
-            <a href="https://www.tiktok.com/@pinkybeast"><i class="fab fa-tiktok"></i> TikTok </a>
+            <a href="https://www.tiktok.com/@pinkybeast" target="_blank"><i class="fab fa-tiktok"></i> TikTok </a>
         </div>
     </div>
 
