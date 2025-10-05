@@ -1,6 +1,6 @@
 # DumbBell 🏋️‍♂️
 
-Welcome to DumbBell – [isi slogan]
+Welcome to DumbBell – Your Friendly Gym Supplements E-Commerce :D
 
 
 ## Introduction
